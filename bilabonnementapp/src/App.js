@@ -1,30 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CreateSubscription from './components/CreateSubscription';
-import EditSubscription from './components/EditSubscription';
-import DeleteSubscription from './components/DeleteSubscription';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import AvailableCar from './components/Subscription/AvailableCarList';
+import CreateSubscription from './components/Subscription/CreateSubscription';
 
 function App() {
   return (
-    <div className="App">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <br></br>
-          <button>Test</button>
-        </p>
-        
     <Router>
-      <Routes>
-        <Route path="/create" element={<CreateSubscription/>} />
-        <Route path="/edit" element={<EditSubscription/>} />
-        <Route path="/delete" element={<DeleteSubscription/>} />
-
-
-      </Routes>
+      <div>
+        <nav>
+          <Link to="/ListOfAvailableCars">Opret lejeaftale </Link>
+          <Link to="/create">Opret skaderapport </Link>
+        </nav>
+        <Routes>
+          <Route path="/ListOfAvailableCars" element={<AvailableCar />} />
+          
+          {/* Rute til CreateSubscription med bilnavn som parameter */}
+          <Route path="/createSubscription/:brand" element={<CreateSubscription />} />
+        </Routes>
+      </div>
     </Router>
-    </div>
   );
 }
 
