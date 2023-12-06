@@ -19,7 +19,7 @@ function CreateSubscription(){
         e.preventDefault();
         axios.post("", newSubscription)
             .then(()=> navigate("/"))
-            .catch(error => console.error("Error creating subscription", error));
+            .catch(error => console.error("E rror creating subscription", error));
     };
 
     const handleEdit = (e) => {
