@@ -20,7 +20,7 @@
 /* Menu bar - Bilabonnement intern / tekst farve */
 .navbar.navbar-default .navbar-brand,
 .navbar.navbar-default .btn {
-  color: white; /* Hvid farve på teksten "Bilabonnement intern */
+  color: white; 
 }
 
 /* Sidebar farve */
@@ -31,7 +31,7 @@
   z-index: 1;
   bottom: 0; 
   background-color: rgb(80, 140, 188);
-  padding-top: 10%; /* Adjust padding to take the top 10% space */
+  padding-top: 10%; 
 }
 
 /* "Opret lejeaftale" knap farve*/
@@ -59,3 +59,47 @@
   z-index: 0; 
 }
 
+
+
+/* Container til "Ledige aftaler" - grå baggrund */
+.container-gray {
+  background-color: rgb(231, 229, 229); 
+  padding: 20px; 
+  text-align: center; 
+}
+
+/* Titel */
+.inner-container {
+  margin: 20px; 
+  
+}
+
+/* Ydre container */
+.outer-container {
+  background-color: transparent; 
+  display: flex;
+  justify-content: center;
+}
+
+/* Container til listen af biler - hvid baggrund */
+.car-container {
+  background-color: #fff; 
+  padding: 20px; 
+  width: 50%; 
+  height: 50%; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  position: relative;
+  right: 20%; 
+  text-align: left;
+}
+
+.car-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  color: black; 
+}
+
+.car-list-item {
+  padding: 8px 0; 
+}
