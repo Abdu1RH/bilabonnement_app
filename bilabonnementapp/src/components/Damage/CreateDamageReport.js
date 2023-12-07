@@ -33,7 +33,7 @@ function CreateDamageReport(){
                     <input 
                         type='string'
                         name='error'
-                        value={damageReport.error}
+                        value={newDamageReport.error}
                         onChange={handleEdit}
                     />
                 </div>
@@ -43,7 +43,7 @@ function CreateDamageReport(){
                     <input
                         type='string'
                         name='error type'
-                        value={damageReport.errorType}
+                        value={newDamageReport.errorType}
                         onChange={handleEdit}
                     />
                 </div>
@@ -53,7 +53,7 @@ function CreateDamageReport(){
                     <input
                         type='number'
                         name='number of errors'
-                        value={damageReport.numberOfErrors}
+                        value={newDamageReport.numberOfErrors}
                         onChange={handleEdit}
                     />
                 </div>
@@ -63,7 +63,7 @@ function CreateDamageReport(){
                     <input
                         type='number'
                         name='price per error'
-                        value={damageReport.pricePerError}
+                        value={newDamageReport.pricePerError}
                     />
                 </div>
     
