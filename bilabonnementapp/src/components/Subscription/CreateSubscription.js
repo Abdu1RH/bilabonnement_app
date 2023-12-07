@@ -6,30 +6,26 @@ import Customer from './Customer';
 function CreateSubscription() {
     const navigate = useNavigate();
 
-    // Opretter en lokal state for at holde værdierne af de nye abonnementer
     const [newSubscription, setNewSubscription] = useState({
-        startDate: '', // Ændret fra 0 til '' (tom streng) til datoen
-        endDate: '', // Ændret fra 0 til '' (tom streng) til datoen
+        startDate: '',
+        endDate: '',
         plannedDistanceInKilometers: 0,
         customer: '',
         car: '',
     });
 
-    // Funktionen der kaldes, når formularen indsendes
     const handleCreate = (e) => {
         e.preventDefault();
         
-        // Sender POST-anmodning til backend med data fra newSubscription
         axios.post('http://localhost:8080/api/subscriptions', newSubscription)
-            .then(() => navigate("/")) // Redirigerer til hjemmesiden ved succes
-            .catch(error => console.error("Error creating subscription", error)); // Håndterer fejl og udskriver fejl i konsollen
+            .then(() => navigate("/"))
+            .catch(error => console.error("Error creating subscription", error));
     };
 
-    // Funktionen, der opdaterer newSubscription når inputfelterne ændres
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setNewSubscription({ ...newSubscription, [name]: value });
-    };
+        const value = e.target.type === 'input' ? e.target.checked : e.target.value;
+        setNewSubscription({ ...newSubscription, [e.target.name]: value });
+      };
 
     return (
         <div>
@@ -61,11 +57,10 @@ function CreateSubscription() {
                     <input type="text" name="car" value={newSubscription.car} onChange={handleChange} />
                 </label>
 
-                <Customer /> {/* Customer inputfelter kommer fra Cutomer.js under 'return' */}
-                <br />
-                <input type="submit" value="Opret lejeaftale" /> 
+                <Customer />
+                
+                <button type="submit">Opret lejeaftale</button>  
             </form>
-
         </div>
     );
 }

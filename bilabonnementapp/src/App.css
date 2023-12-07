@@ -1,48 +1,61 @@
-.App {
-  text-align: center;
+/* Container - opret lejeaftale*/
+.container-primary {
+  background-color: rgb(231, 229, 229); /* Red color */
+  margin-left: 80px; /* Same width as .sidenav */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container - opret skaderaport*/
+.container-secondary {
+  background-color: rgb(231, 229, 229); /* Black color */
+  margin-left: 60px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Menu bar - Bilabonnement intern / menu farve*/
+.navbar.navbar-default {
+  background-color: black; 
+  height: 60px; 
+  width: 100%; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Menu bar - Bilabonnement intern / tekst farve */
+.navbar.navbar-default .navbar-brand,
+.navbar.navbar-default .btn {
+  color: white; /* Hvid farve på teksten "Bilabonnement intern */
 }
 
-.App-link {
-  color: #61dafb;
+/* Sidebar farve */
+.sidenav {
+  height: 92.8%;
+  width: 60px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0; 
+  background-color: rgb(80, 140, 188);
+  padding-top: 10%; /* Adjust padding to take the top 10% space */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* "Opret lejeaftale" knap farve*/
+.container-primary .btn {
+  background-color: rgb(80, 140, 188); 
+  color: #fff; 
 }
 
-
-.car-list {
-  list-style-type: none; /* Fjerner punkterne fra listen */
-  padding: 0; /* Fjerner standard indrykning på listen */
+/*"Opret skaderapport" knap farve */
+.container-secondary .btn {
+  background-color: rgb(80, 140, 188); 
+  color: #fff; 
 }
 
-.car-list li {
-  margin-bottom: 5px; /* Tilføjer en lille afstand mellem bilmodellerne */
+/*"Opret lejeaftale" knap og billede placering: */
+.image-size {
+  width: 80%; 
+  height: auto; 
 }
+
+.btn-overlay {
+  position: absolute;
+  bottom: 50px; 
+  left: 130px; 
+  z-index: 0; 
+}
+
