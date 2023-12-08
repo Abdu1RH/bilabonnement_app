@@ -59,7 +59,7 @@ function CreateSubscription() {
 
                 <Customer />
                 
-                <button type="submit">Opret lejeaftale</button>  
+                <button id="opretBtn" type="submit">Opret lejeaftale</button>  
             </form>
         </div>
     );
