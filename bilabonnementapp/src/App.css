@@ -1,20 +1,51 @@
 /* Container - opret lejeaftale*/
 .container-primary {
-  background-color: rgb(231, 229, 229); /* Red color */
-  margin-left: 80px; /* Same width as .sidenav */
+  background-color: rgb(229, 229, 229); /* light grey */
+  margin-top: 15px;
+  margin-left: 75px;
+  height: 40%;
+  width: 40%;
+  border-radius: 10px; /* rounded corners */
 }
 
 /* Container - opret skaderaport*/
 .container-secondary {
-  background-color: rgb(231, 229, 229); /* Black color */
-  margin-left: 60px; 
+  background-color: rgb(229, 229, 229); /* light grey */
+  margin-top: 15px;
+  margin-right: 75px;
+  height: auto;
+  width: auto;
+  border-radius: 10px; /* rounded corners */
+}
+
+.container-rentedCars,
+.container-notRentedCars,
+.container-totalPrice {
+  background-color: rgb(229, 229, 229); /* light grey */
+  margin-top: 15px;
+  margin-right: 75px;
+  height: 10%;
+  width: 10%;
+  border-radius: 10px; /* rounded corners */
+}
+
+.col-2 {
+  width: 20px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 15px;
 }
 
 /* Menu bar - Bilabonnement intern / menu farve*/
 .navbar.navbar-default {
-  background-color: black; 
-  height: 60px; 
-  width: 100%; 
+  background-color: black;
+  height: 55px;
+  width: 100%;
 }
 
 /* Menu bar - Bilabonnement intern / tekst farve */
@@ -26,36 +57,36 @@
 /* Sidebar farve */
 .sidenav {
   height: 92.8%;
-  width: 60px;
+  width: 55px;
   position: fixed;
   z-index: 1;
-  bottom: 0; 
+  bottom: 0;
   background-color: rgb(80, 140, 188);
   padding-top: 10%; /* Adjust padding to take the top 10% space */
 }
 
 /* "Opret lejeaftale" knap farve*/
 .container-primary .btn {
-  background-color: rgb(80, 140, 188); 
-  color: #fff; 
+  background-color: rgb(80, 140, 188);
+  color: #fff;
 }
 
 /*"Opret skaderapport" knap farve */
 .container-secondary .btn {
-  background-color: rgb(80, 140, 188); 
-  color: #fff; 
+  background-color: rgb(80, 140, 188);
+  color: #fff;
 }
 
 /*"Opret lejeaftale" knap og billede placering: */
 .image-size {
-  width: 80%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* rounded corners */
 }
 
 .btn-overlay {
   position: absolute;
-  bottom: 50px; 
-  left: 130px; 
-  z-index: 0; 
+  bottom: 50px;
+  left: 130px;
+  z-index: 0;
 }
-
