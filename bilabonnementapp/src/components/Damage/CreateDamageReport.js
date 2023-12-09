@@ -15,7 +15,7 @@ function CreateDamageReport(){
 
     const handleCreate = (e) => {
         e.preventDefault();
-        axios.post("", newDamageReport)
+        axios.post("http://localhost:8080/api/damagereports", newDamageReport)
             .then(()=> navigate("/"))
             .catch(error => console.error("Error creating damage report", error));
     };
@@ -42,7 +42,7 @@ function CreateDamageReport(){
                     <label>Error type</label>
                     <input
                         type='string'
-                        name='error type'
+                        name='errorType'
                         value={newDamageReport.errorType}
                         onChange={handleEdit}
                     />
@@ -52,7 +52,7 @@ function CreateDamageReport(){
                     <label>Number of errors</label>
                     <input
                         type='number'
-                        name='number of errors'
+                        name='numberOfErrors'
                         value={newDamageReport.numberOfErrors}
                         onChange={handleEdit}
                     />
@@ -62,8 +62,9 @@ function CreateDamageReport(){
                     <label>Price per error</label>
                     <input
                         type='number'
-                        name='price per error'
+                        name='pricePerError'
                         value={newDamageReport.pricePerError}
+                        onChange={handleEdit}
                     />
                 </div>
     

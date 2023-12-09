@@ -54,7 +54,7 @@ h2 {
 /* Menu bar - Bilabonnement intern / tekst farve */
 .navbar.navbar-default .navbar-brand,
 .navbar.navbar-default .btn {
-  color: white; /* Hvid farve på teksten "Bilabonnement intern */
+  color: white; 
 }
 
 /* Sidebar farve */
@@ -65,7 +65,7 @@ h2 {
   z-index: 1;
   bottom: 0;
   background-color: rgb(80, 140, 188);
-  padding-top: 10%; /* Adjust padding to take the top 10% space */
+  padding-top: 10%; 
 }
 
 /* "Opret lejeaftale" knap farve*/
@@ -92,4 +92,139 @@ h2 {
   bottom: 50px;
   left: 130px;
   z-index: 0;
+}
+
+/*#ListOfAvailableCars*/
+.outer-container {
+  display: flex;
+}
+
+/* Container for .car-container */
+.container-gray {
+  background-color: rgb(231, 229, 229);
+  padding: 20px;
+  text-align: center;
+  max-width: 1450px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
+}
+
+/* Container for "ledige biler" og "udlejede biler" "*/
+.car-container {
+  background-color: #fff; 
+  padding: 20px; 
+  width: 50%; /* Deler bredden i halvdelen */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  text-align: left;
+  border-radius: 10px; /* Tilføjelse af afrundede kanter */
+  margin: 10px; /* Tilføjelse af mellemrum mellem containere */
+}
+
+/* Titel - Ledige biler #ListOfAvailableCars og "Lejeaftaler - #createSubscription/Chevrolet, AB 12345 */
+.inner-container {
+  margin: 20px;
+  text-align: left; /* Placerer teksten til venstre */
+}
+
+
+/* Ydre container for "ledige biler" og "udlejede biler"*/
+.outer-container {
+  background-color: transparent; 
+  display: flex;
+  justify-content: center;
+}
+
+/* Fjerner prikker på listen af ledige biler */
+.car-list {
+  list-style: none;
+}
+
+/* Mellemrum mellem listen af ledige biler */
+.car-list-item {
+  padding: 8px 0; 
+}
+
+/* Liste af "Udlejdede biler" */
+.rented-car-list p:nth-of-type(1) {
+  font-size: 24px; 
+}
+.rented-car-list p:nth-of-type(2) {
+  font-size: 35px; 
+}
+.rented-car-list p:nth-of-type(3) {
+  font-size: 16px;
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+.rented-car-list p:nth-of-type(n+3) {
+  font-size: 16px; 
+}
+
+/* Liste af "Ledige biler" */
+.car-list p:nth-of-type(1) {
+  font-size: 24px;
+  color: black; 
+  text-decoration: none; 
+}
+
+.car-list p:nth-of-type(2) {
+  font-size: 35px;
+  color: black; 
+  text-decoration: none; 
+}
+
+.car-list p:nth-of-type(3) {
+  font-size: 16px;
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.car-list-item a {
+  color: black !important;
+  text-decoration: none; 
+}
+
+
+
+
+/*#createSubscription*/
+/* "Abonnementsinformation" og "Kunde information" og "bil information" - container */
+.container-around-lease-container{
+  background-color: #fff; 
+  width: 200%; /* Deler bredden i halvdelen */
+  border-radius: 10px;
+}
+
+.lease-container {
+  background-color: #fff; 
+  padding: 20px; 
+  width: 50%; /* Deler bredden i halvdelen */
+  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  text-align: left;
+  border-radius: 10px; /* Tilføjelse af afrundede kanter */
+  margin: 10px; /* Tilføjelse af mellemrum mellem containere */
+}
+
+/* Grå boks med reminder - "påmindelse" */
+.reminder-list {
+  background-color: rgb(231, 229, 229);
+  padding: 20px; 
+  width: 50%; /* Deler bredden i halvdelen */
+  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  text-align: left;
+  border-radius: 10px; /* Tilføjelse af afrundede kanter */
+  margin: 10px; /* Tilføjelse af mellemrum mellem containere */
+}
+
+
+/* "Lejeaftaler" container */
+.container {
+  background-color: rgb(231, 229, 229);
+  padding: 20px;
+  text-align: left;
+  max-width: 1450px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
 }

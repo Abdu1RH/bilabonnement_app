@@ -6,29 +6,24 @@ function Customer() {
   const navigate = useNavigate();
   const [customer, setCustomer] = useState({
     firstName: '',
-    lastName: '', // Tekstfelt
-    cpr: '', // Tekstfelt (CPR-nummer som en streng)
-    accountNumber: 0, // Heltalsfelt
+    lastName: '',
+    cpr: '',
+    accountNumber: 0,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Hvis det er accountNumber, konverteres værdien til et heltal, ellers er det en tekststreng
     const newValue = name === 'accountNumber' ? parseInt(value) : value;
-
     setCustomer({ ...customer, [name]: newValue });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("<URL>", customer) // Erstatt "<URL>" med den faktiske URL til POST-anmodningen
+    axios.post("<URL>", customer)
       .then(() => {
-        // Handle success, f.eks. navigere til en anden side
         navigate('/');
       })
       .catch(error => {
-        // Handle fejl, f.eks. logge fejlen
         console.error('Error creating customer:', error);
       });
   };
@@ -37,25 +32,59 @@ function Customer() {
     <div>
       <h2>Kundens information</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input type="text" name="firstName" value={customer.firstName} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Last Name:
-          <input type="text" name="lastName" value={customer.lastName} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          CPR:
-          <input type="text" name="cpr" value={customer.cpr} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Account Number:
-          <input type="number" name="accountNumber" value={customer.accountNumber} onChange={handleChange} />
-        </label>
+        <div className="mb-3">
+          <label htmlFor="firstName" className="form-label">
+            Fornavn:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="firstName"
+            name="firstName"
+            value={customer.firstName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="lastName" className="form-label">
+            Efternavn:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="lastName"
+            name="lastName"
+            value={customer.lastName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="cpr" className="form-label">
+            CPR nr:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="cpr"
+            name="cpr"
+            value={customer.cpr}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="accountNumber" className="form-label">
+            Kontonummer:
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="accountNumber"
+            name="accountNumber"
+            value={customer.accountNumber}
+            onChange={handleChange}
+          />
+        </div>
+      
       </form>
     </div>
   );
