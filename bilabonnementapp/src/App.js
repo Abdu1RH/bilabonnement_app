@@ -34,7 +34,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             {/* Opret lejeaftale container */}
-            <div className="col-5 container-primary p-3 mb-3">
+            <div className="col-md-5 container-primary p-3 mb-3">
               <h1>Lejeaftaler</h1>
               <img
                 src={imgOfSubscription}
@@ -51,7 +51,7 @@ function App() {
             {/* Mellemrum mellem containere */}
             <div className="col-2"></div>
             {/* Opret skaderapport container */}
-            <div className="col-5 container-secondary p-3 mb-3">
+            <div className="col-md-5 container-secondary p-3 mb-3">
               <h1>Skade og udbedring</h1>
               <img
                 src={imgOfDamageReport}
@@ -62,13 +62,14 @@ function App() {
                 Opret skaderapport
               </Link>
             </div>
-            <div className="col-5 container-rentedCars p-3 mb-3">
+
+            <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>
             </div>
-            <div className="col-5 container-notRentedCars p-3 mb-3">
+            <div className="col-md-5 container-notRentedCars p-3 mb-3">
               <h2>Hvor mange biler er ikke lejet ud:</h2>
             </div>
-            <div className="col-5 container-totalPrice p-3 mb-3">
+            <div className="col-md-5 container-totalPrice p-3 mb-3">
               <h2>
                 Hvad er den sammenlagte pris på de nuværende udlejede biler?
               </h2>
