@@ -33,10 +33,12 @@
   width: 20px;
 }
 
+/* overskrift størrelse på de 2 øverste containers*/
 h1 {
   font-size: 30px;
 }
 
+/* overskrift størrelse på de 3 nederste containers*/
 h2 {
   font-size: 15px;
 }

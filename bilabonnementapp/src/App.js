@@ -62,13 +62,15 @@ function App() {
                 Opret skaderapport
               </Link>
             </div>
-
+            {/* Se antal udlejede biler container */}
             <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>
             </div>
+            {/* Se antal ledige biler container */}
             <div className="col-md-5 container-notRentedCars p-3 mb-3">
               <h2>Hvor mange biler er ikke lejet ud:</h2>
             </div>
+            {/* sammenlagt priser af de udlejede biler container */}
             <div className="col-md-5 container-totalPrice p-3 mb-3">
               <h2>
                 Hvad er den sammenlagte pris på de nuværende udlejede biler?
