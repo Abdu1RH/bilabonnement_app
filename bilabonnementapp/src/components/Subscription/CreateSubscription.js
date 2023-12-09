@@ -16,7 +16,7 @@ function CreateSubscription() {
 
     const handleCreate = (e) => {
         e.preventDefault();
-        
+
         axios.post('http://localhost:8080/api/subscriptions', newSubscription)
             .then(() => navigate("/"))
             .catch(error => console.error("Error creating subscription", error));
@@ -25,42 +25,51 @@ function CreateSubscription() {
     const handleChange = (e) => {
         const value = e.target.type === 'input' ? e.target.checked : e.target.value;
         setNewSubscription({ ...newSubscription, [e.target.name]: value });
-      };
+    };
 
     return (
-        <div>
+        <div className="container">
             <h1>Lejeaftaler</h1>
-            <h2>Abonnementsinformation</h2>
-            <form onSubmit={handleCreate}>
-                <label>
-                    Start Date:
-                    <input type="date" name="startDate" value={newSubscription.startDate} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    End Date:
-                    <input type="date" name="endDate" value={newSubscription.endDate} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    Planned Distance (in Kilometers):
-                    <input type="number" name="plannedDistanceInKilometers" value={newSubscription.plannedDistanceInKilometers} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    Customer:
-                    <input type="text" name="customer" value={newSubscription.customer} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    Car:
-                    <input type="text" name="car" value={newSubscription.car} onChange={handleChange} />
-                </label>
+            <p>Opret lejeaftale over xxxx</p>
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="lease-container">
 
-                <Customer />
-                
-                <button id="opretBtn" type="submit">Opret lejeaftale</button>  
-            </form>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="subscription-container">
+                                    <h2>Abonnement information</h2>
+                                    <form onSubmit={handleCreate}>
+                                        <div className="mb-3">
+                                            <label htmlFor="startDate" className="form-label">Start Dato:</label>
+                                            <input type="date" className="form-control" id="startDate" name="startDate" value={newSubscription.startDate} onChange={handleChange} />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="endDate" className="form-label">Slut dato:</label>
+                                            <input type="date" className="form-control" id="endDate" name="endDate" value={newSubscription.endDate} onChange={handleChange} />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="plannedDistance" className="form-label">Antal aftalt kørt km:</label>
+                                            <input type="number" className="form-control" id="plannedDistance" name="plannedDistanceInKilometers" value={newSubscription.plannedDistanceInKilometers} onChange={handleChange} />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="customer" className="form-label">Kunde:</label>
+                                            <input type="text" className="form-control" id="customer" name="customer" value={newSubscription.customer} onChange={handleChange} />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="car" className="form-label">Bil:</label>
+                                            <input type="text" className="form-control" id="car" name="car" value={newSubscription.car} onChange={handleChange} />
+                                        </div>
+                                        <Customer />
+                                        <button className="btn btn-primary" type="submit">Opret lejeaftale</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }

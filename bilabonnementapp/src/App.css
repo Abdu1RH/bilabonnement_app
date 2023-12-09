@@ -61,45 +61,123 @@
 
 
 
-/* Container til "Ledige aftaler" - grå baggrund */
+/*#ListOfAvailableCars*/
+.outer-container {
+  display: flex;
+}
+
+/* Container for .car-container */
 .container-gray {
-  background-color: rgb(231, 229, 229); 
+  background-color: rgb(231, 229, 229);
+  padding: 20px;
+  text-align: center;
+  max-width: 1450px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
+}
+
+/* Container for "ledige biler" og "udlejede biler" "*/
+.car-container {
+  background-color: #fff; 
   padding: 20px; 
-  text-align: center; 
+  width: 50%; /* Deler bredden i halvdelen */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  text-align: left;
+  border-radius: 10px; /* Tilføjelse af afrundede kanter */
+  margin: 10px; /* Tilføjelse af mellemrum mellem containere */
 }
 
-/* Titel */
+/* Titel - Ledige biler */
 .inner-container {
-  margin: 20px; 
-  
+  margin: 20px;
+  text-align: left; /* Placerer teksten til venstre */
 }
 
-/* Ydre container */
+
+/* Ydre container for "ledige biler" og "udlejede biler"*/
 .outer-container {
   background-color: transparent; 
   display: flex;
   justify-content: center;
 }
 
-/* Container til listen af biler - hvid baggrund */
-.car-container {
-  background-color: #fff; 
-  padding: 20px; 
-  width: 50%; 
-  height: 50%; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-  position: relative;
-  right: 20%; 
-  text-align: left;
-}
-
+/* Fjerner prikker på listen af ledige biler */
 .car-list {
   list-style: none;
-  padding-left: 0;
-  text-align: left;
-  color: black; 
 }
 
+/* Mellemrum mellem listen af ledige biler */
 .car-list-item {
   padding: 8px 0; 
 }
+
+/* Liste af "Udlejdede biler" */
+.rented-car-list p:nth-of-type(1) {
+  font-size: 24px; 
+}
+.rented-car-list p:nth-of-type(2) {
+  font-size: 35px; 
+}
+.rented-car-list p:nth-of-type(3) {
+  font-size: 16px;
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+.rented-car-list p:nth-of-type(n+3) {
+  font-size: 16px; 
+}
+
+/* Liste af "Ledige biler" */
+.car-list p:nth-of-type(1) {
+  font-size: 24px;
+  color: black; 
+  text-decoration: none; 
+}
+
+.car-list p:nth-of-type(2) {
+  font-size: 35px;
+  color: black; 
+  text-decoration: none; 
+}
+
+.car-list p:nth-of-type(3) {
+  font-size: 16px;
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.car-list-item a {
+  color: black !important;
+  text-decoration: none; 
+}
+
+
+
+
+/*#createSubscription*/
+/* "Lejeaftaler" container */
+.lease-container {
+  background-color:#fff;
+  padding: 20px;
+  text-align: center;
+  max-width: 4000px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
+}
+
+/* "Abonnementsinformation" og "Kunde information" - container */
+.container {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 2000px; /* Ændre bredden ved at justere max-width */
+}
+
+
+
