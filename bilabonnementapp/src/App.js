@@ -13,7 +13,6 @@ function App() {
     <Router>
       <div>
         <div class="sidenav"></div>
-
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -62,6 +61,7 @@ function App() {
                 Opret skaderapport
               </Link>
             </div>
+
             {/* Se antal udlejede biler container */}
             <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>

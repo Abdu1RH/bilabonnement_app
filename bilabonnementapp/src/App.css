@@ -18,6 +18,7 @@
   border-radius: 10px; /* rounded corners */
 }
 
+/* Containers - de tre nederste */
 .container-rentedCars,
 .container-notRentedCars,
 .container-totalPrice {
