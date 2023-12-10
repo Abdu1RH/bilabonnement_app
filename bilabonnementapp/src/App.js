@@ -1,18 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import AvailableCar from "./components/Subscription/AvailableCarList";
 import CreateSubscription from "./components/Subscription/CreateSubscription";
 import CreateDamageReport from "./components/Damage/CreateDamageReport";
+import Car from "./components/Car/Car";
 import "bootstrap/dist/css/bootstrap.min.css"; //Bootstrap
 import "./App.css";
+import EditCar from "./components/Car/EditCar";
 import imgOfSubscription from "./img/imgSubscription.jpg"; //Importer billedet "car rental contract" fra img mappen under src
 import imgOfDamageReport from "./img/imgDamageReport1.jpg";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
-        <div class="sidenav"></div>
+       {/* <div class="sidenav"></div>*/}
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -29,7 +31,6 @@ function App() {
             </ul>
           </div>
         </nav>
-
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             {/* Opret lejeaftale container */}
@@ -62,6 +63,13 @@ function App() {
               </Link>
             </div>
 
+            {/* Opret bil knap */}
+            <div className="col-md-5 container-secondary p-3 mb-3">
+              <h1>Opret Bil</h1>
+              <Link to="/ListOfCars" className="btn btn-info">Opret bil </Link>
+            </div>
+
+
             {/* Se antal udlejede biler container */}
             <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>
@@ -82,14 +90,16 @@ function App() {
         <Routes>
           <Route path="/ListOfAvailableCars" element={<AvailableCar />} />
           <Route path="/CreateDamageReport" element={<CreateDamageReport />} />
+
+          
+          <Route path="/ListOfCars" element={<Car />} />
+          <Route path="/EditCar/:id" element={<EditCar />} />
+          
           {/* Rute til CreateSubscription med bilnavn som parameter */}
-          <Route
-            path="/createSubscription/:brand"
-            element={<CreateSubscription />}
-          />
+          <Route path="/createSubscription/:brand" element={<CreateSubscription />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
