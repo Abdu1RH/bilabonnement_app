@@ -44,7 +44,7 @@ function App() {
                 to="/ListOfAvailableCars"
                 className="btn btn-info btn-overlay"
               >
-                Opret lejeaftale
+                Administrer lejeaftale
               </Link>
             </div>
             {/* Mellemrum mellem containere */}
@@ -58,7 +58,7 @@ function App() {
                 className="image-size"
               />
               <Link to="/createDamageReport" className="btn btn-info">
-                Opret skaderapport
+                Administrer skaderapport
               </Link>
             </div>
 
