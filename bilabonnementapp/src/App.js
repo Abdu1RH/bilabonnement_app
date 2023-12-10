@@ -7,6 +7,8 @@ import Car from "./components/Car/Car";
 import "bootstrap/dist/css/bootstrap.min.css"; //Bootstrap
 import "./App.css";
 import EditCar from "./components/Car/EditCar";
+import CreateCar from "./components/Car/CreateCar";
+import DeleteCar from "./components/Car/DeleteCar";
 import imgOfSubscription from "./img/imgSubscription.jpg"; //Importer billedet "car rental contract" fra img mappen under src
 import imgOfDamageReport from "./img/imgDamageReport1.jpg";
 
@@ -35,14 +37,15 @@ function App() {
           <div className="container-fluid">
             {/* Opret lejeaftale container */}
             <div className="col-md-5 container-primary p-3 mb-3">
-              <h1>Lejeaftaler</h1>
+              <h1>Lejeaftaler - ikke den rigtige</h1>
               <img
                 src={imgOfSubscription}
                 alt="picture of a rental contract"
                 className="image-size"
               />
+               {/* Administrer lejeaftale knap */}
               <Link
-                to="/ListOfAvailableCars"
+                to="/ListOfCars"
                 className="btn btn-info btn-overlay"
               >
                 Administrer lejeaftale
@@ -63,13 +66,6 @@ function App() {
               </Link>
             </div>
 
-            {/* Opret bil knap */}
-            <div className="col-md-5 container-secondary p-3 mb-3">
-              <h1>Opret Bil</h1>
-              <Link to="/ListOfCars" className="btn btn-info">Opret bil </Link>
-            </div>
-
-
             {/* Se antal udlejede biler container */}
             <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>
@@ -88,15 +84,14 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/ListOfAvailableCars" element={<AvailableCar />} />
           <Route path="/CreateDamageReport" element={<CreateDamageReport />} />
-
-          
           <Route path="/ListOfCars" element={<Car />} />
+
+          <Route path="/CreateCar/:id" element={<Car />} />
           <Route path="/EditCar/:id" element={<EditCar />} />
-          
+          <Route path="/DeleteCar/:id" element={<DeleteCar />} />
           {/* Rute til CreateSubscription med bilnavn som parameter */}
-          <Route path="/createSubscription/:brand" element={<CreateSubscription />} />
+          <Route path="/createSubscription/:id" element={<CreateSubscription />} />
         </Routes>
       </div>
     </BrowserRouter>

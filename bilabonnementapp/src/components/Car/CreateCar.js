@@ -16,7 +16,7 @@ function EditCar() {
     });
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/cars/${id}`)
+        axios.post(`http://localhost:8080/api/cars/${id}`)
             .then(response => setCar(response.data))
             .catch(error => console.log('Error fetching car:', error));
     }, [id]);
@@ -35,7 +35,7 @@ function EditCar() {
 
     return (
         <div>
-            <h2>Opdatere bilen</h2>
+            <h2>Registrer en ny bil</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>brand:</label>

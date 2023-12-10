@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+
+import { useParams, useNavigate } from "react-router-dom";
+import Customer from "../Car/Customer";
 
 function CreateSubscription() {
     const navigate = useNavigate();
-
+    const { id } = useParams();
     const [newSubscription, setNewSubscription] = useState({
         startDate: '',
         endDate: '',
+        carID: 0,
+        customerID: 0,
         plannedDistanceInKilometers: 0,
     });
 
     const handleCreate = (e) => {
         e.preventDefault();
-
+        newSubscription.carID = id;
+        console.log(newSubscription);
         axios.post('http://localhost:8080/api/subscriptions', newSubscription)
             .then(() => navigate("/"))
             .catch(error => console.error("Error creating subscription", error));
@@ -30,6 +35,7 @@ function CreateSubscription() {
                 <h1>Lejeaftaler</h1>
                 <p>Opret bil over xxx</p>
             </div>
+            <Customer sendToParent={newSubscription}/>
             <div className="row">
                 <div className="col-md-6">
                     <div className="container-around-lease-container">
