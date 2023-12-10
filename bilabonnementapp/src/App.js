@@ -37,7 +37,7 @@ function App() {
           <div className="container-fluid">
             {/* Opret lejeaftale container */}
             <div className="col-md-5 container-primary p-3 mb-3">
-              <h1>Lejeaftaler - ikke den rigtige</h1>
+              <h1>Lejeaftaler </h1>
               <img
                 src={imgOfSubscription}
                 alt="picture of a rental contract"
@@ -66,6 +66,18 @@ function App() {
               </Link>
             </div>
 
+            <div className="col-md-5 container-secondary p-3 mb-3">
+              <h1>Rapportering og overvågning</h1>
+              <img
+                src={imgOfDamageReport}
+                alt="picture of a car condition report"
+                className="image-size"
+              />
+              <Link to="/AvailableCarList" className="btn btn-info">
+              Se overblik over ulejede biler
+              </Link>
+            </div>
+
             {/* Se antal udlejede biler container */}
             <div className="col-md-5 container-rentedCars p-3 mb-3">
               <h2>Hvor mange biler er lejet ud:</h2>
@@ -85,6 +97,7 @@ function App() {
 
         <Routes>
           <Route path="/CreateDamageReport" element={<CreateDamageReport />} />
+          <Route path="/AvailableCarList" element={<AvailableCar />} />
           <Route path="/ListOfCars" element={<Car />} />
 
           <Route path="/CreateCar/:id" element={<Car />} />
