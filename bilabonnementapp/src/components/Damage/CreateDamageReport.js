@@ -25,53 +25,86 @@ function CreateDamageReport(){
         setNewDamageReport({ ... newDamageReport, [e.target.name]: value})
     };
     return(
-    <div>
-        <h1>Create Damage Report</h1>
-        <form onSubmit={handleCreate}>
-            <div>
-                    <label>Error</label>
-                    <input 
-                        type='string'
-                        name='error'
-                        value={newDamageReport.error}
-                        onChange={handleEdit}
-                    />
-                </div>
-                
-                <div>
-                    <label>Error type</label>
-                    <input
-                        type='string'
-                        name='errorType'
-                        value={newDamageReport.errorType}
-                        onChange={handleEdit}
-                    />
-                </div>
+    <div className="container-gray">
+        {/*Container til "Skade og udbedring*/}
+            <div classname="inner-container" >
+             <h1>Skade og udbedring</h1>
+              </div>
+              
+              <div classname="outer-container" >
+              <div className="row">
+                <div className="col-md-6">
+                    <div className="damage-containers">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="subscription-container">
+                                    <form onSubmit={handleCreate}>
+                                    <div>
+                                        <label>Skade</label>
+                                        <input 
+                                            type='string'
+                                            name='error'
+                                            value={newDamageReport.error}
+                                            onChange={handleEdit}
+                                        />
+                                    </div>
+                                    
+                                    <div>
+                                        <label>Type af skade</label>
+                                        <input
+                                            type='string'
+                                            name='errorType'
+                                            value={newDamageReport.errorType}
+                                            onChange={handleEdit}
+                                        />
+                                    </div>
 
-                <div>
-                    <label>Number of errors</label>
-                    <input
-                        type='number'
-                        name='numberOfErrors'
-                        value={newDamageReport.numberOfErrors}
-                        onChange={handleEdit}
-                    />
-                </div>
+                                    <div>
+                                        <label>Antal skader</label>
+                                        <input
+                                            type='number'
+                                            name='numberOfErrors'
+                                            value={newDamageReport.numberOfErrors}
+                                            onChange={handleEdit}
+                                        />
+                                    </div>
 
-                <div>
-                    <label>Price per error</label>
-                    <input
-                        type='number'
-                        name='pricePerError'
-                        value={newDamageReport.pricePerError}
-                        onChange={handleEdit}
-                    />
-                </div>
-    
-            <button type='submit'>Update damage report</button>
-        </form>
-    </div>
+                                    <div>
+                                        <label>Pris per skade</label>
+                                        <input
+                                            type='number'
+                                            name='pricePerError'
+                                            value={newDamageReport.pricePerError}
+                                            onChange={handleEdit}
+                                        />
+                                    </div>
+                                
+                                     <button  type='submit'>Opdater skade raport</button>
+                                     </form>
+                                     </div>
+                                </div>
+                             </div>
+                         </div>
+                      </div>  
+                        <div className="outer-damage-raport-small-containers">
+                            <div className="inner-damage-raport-small-containers">
+                                <p>Biler som er klar til at kører: </p>
+                             </div>
+                            <div className="inner-damage-raport-small-containers">
+                                 <p>Biler som er venter på reservedel: </p>
+                            </div>
+                             <div className="inner-damage-raport-small-containers">
+                                <p>Læs mere om FDM: </p>
+                            </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+
+
     );
+
 }
 
 export default CreateDamageReport;
