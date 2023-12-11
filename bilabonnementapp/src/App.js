@@ -21,7 +21,7 @@ function App() {
           <div className="container-fluid">
             <div className="navbar-header">
               <a className="navbar-brand" href="#">
-                Bilabonnement intern
+                Bilabonnement intern system
               </a>
             </div>
             {/* Din øverste menu */}
