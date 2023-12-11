@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Check if Git Repository exists
+        run: '[ -d .git ] || git init'
+
       - name: Clear Git Configurations
         run: |
           git remote set-url origin https://github.com/${{ github.repository }}.git
