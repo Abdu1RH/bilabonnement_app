@@ -13,36 +13,7 @@ import DeleteCar from "./components/Car/DeleteCar";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-       {/* <div class="sidenav"></div>*/}
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <a className="navbar-brand" href="#">
-                Bilabonnement intern system
-              </a>
-            </div>
-            {/* Din øverste menu */}
-            <ul className="nav navbar-nav">
-              <li className="nav-item">
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
-              {/* Andre menuelementer her */}
-            </ul>
-          </div>
-        </nav>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container-fluid">
-            {/* Opret lejeaftale container */}
-            <div className="col-md-5 container-primary p-3 mb-3">
-              <h1>Lejeaftaler </h1>
-              <img
-                src={imgOfSubscription}
-                alt="picture of a rental contract"
-                className="image-size"
-
-<div className="App">
+    <div className="App">
       <header className="App-header">
         <div>
           <BrowserRouter>
@@ -51,8 +22,7 @@ function App() {
               <Route
                 path="/CreateDamageReport"
                 element={<CreateDamageReport />}
-              
-
+              />
               <Route path="/AvailableCarList" element={<AvailableCar />} />
               <Route path="/ListOfCars" element={<Car />} />
 
