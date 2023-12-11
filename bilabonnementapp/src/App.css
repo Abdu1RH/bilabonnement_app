@@ -2,9 +2,9 @@
 .container-primary {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
-  margin-left: 75px;
-  height: 40%;
-  width: 40%;
+  margin-left: 40px;
+  height: 30%;
+  width: 30%;
   border-radius: 10px; /* rounded corners */
 }
 
@@ -12,21 +12,19 @@
 .container-secondary {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
-  margin-right: 75px;
-  height: auto;
-  width: auto;
+  margin-right: 50px;
+  height: 30%;
+  width: 30%;
   border-radius: 10px; /* rounded corners */
 }
 
-/* Containers - de tre nederste */
-.container-rentedCars,
-.container-notRentedCars,
-.container-totalPrice {
+/* Container - Rapportering og overvågning*/
+.container-third {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
-  margin-right: 75px;
-  height: 20%;
-  width: 20%;
+  margin-right: 50px;
+  height: 30%;
+  width: 30%;
   border-radius: 10px; /* rounded corners */
 }
 
@@ -54,7 +52,7 @@ h2 {
 /* Menu bar - Bilabonnement intern / tekst farve */
 .navbar.navbar-default .navbar-brand,
 .navbar.navbar-default .btn {
-  color: white; 
+  color: white;
 }
 
 /* Sidebar farve */
@@ -65,7 +63,7 @@ h2 {
   z-index: 1;
   bottom: 0;
   background-color: rgb(80, 140, 188);
-  padding-top: 10%; 
+  padding-top: 10%;
 }
 
 /* "Opret lejeaftale" knap farve*/
@@ -80,6 +78,12 @@ h2 {
   color: #fff;
 }
 
+/*"Rapportering og overvågning" knap farve */
+.container-third .btn {
+  background-color: rgb(80, 140, 188);
+  color: #fff;
+}
+
 /*"Opret lejeaftale" knap og billede placering: */
 .image-size {
   width: 100%;
@@ -88,7 +92,7 @@ h2 {
 }
 
 .btn-overlay {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 50px;
   left: 130px;
   z-index: 0;
@@ -111,10 +115,10 @@ h2 {
 
 /* Container for "ledige biler" og "udlejede biler" "*/
 .car-container {
-  background-color: #fff; 
-  padding: 20px; 
+  background-color: #fff;
+  padding: 20px;
   width: 50%; /* Deler bredden i halvdelen */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   border-radius: 10px; /* Tilføjelse af afrundede kanter */
   margin: 10px; /* Tilføjelse af mellemrum mellem containere */
@@ -126,10 +130,9 @@ h2 {
   text-align: left; /* Placerer teksten til venstre */
 }
 
-
 /* Ydre container for "ledige biler" og "udlejede biler"*/
 .outer-container {
-  background-color: transparent; 
+  background-color: transparent;
   display: flex;
   justify-content: center;
 }
@@ -141,65 +144,62 @@ h2 {
 
 /* Mellemrum mellem listen af ledige biler */
 .car-list-item {
-  padding: 8px 0; 
+  padding: 8px 0;
 }
 
 /* Liste af "Udlejdede biler" */
 .rented-car-list p:nth-of-type(1) {
-  font-size: 24px; 
+  font-size: 24px;
 }
 .rented-car-list p:nth-of-type(2) {
-  font-size: 35px; 
+  font-size: 35px;
 }
 .rented-car-list p:nth-of-type(3) {
   font-size: 16px;
-  color: black; 
-  text-decoration: none; 
-  font-weight: bold; 
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
-.rented-car-list p:nth-of-type(n+3) {
-  font-size: 16px; 
+.rented-car-list p:nth-of-type(n + 3) {
+  font-size: 16px;
 }
 
 /* Liste af "Ledige biler" */
 .car-list p:nth-of-type(1) {
   font-size: 24px;
-  color: black; 
-  text-decoration: none; 
+  color: black;
+  text-decoration: none;
 }
 
 .car-list p:nth-of-type(2) {
   font-size: 35px;
-  color: black; 
-  text-decoration: none; 
+  color: black;
+  text-decoration: none;
 }
 
 .car-list p:nth-of-type(3) {
   font-size: 16px;
-  color: black; 
-  text-decoration: none; 
-  font-weight: bold; 
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .car-list-item a {
   color: black !important;
-  text-decoration: none; 
+  text-decoration: none;
 }
-
-
-
 
 /*#createSubscription*/
 /* "Abonnementsinformation" og "Kunde information" og "bil information" - container */
-.container-around-lease-container{
-  background-color: #fff; 
+.container-around-lease-container {
+  background-color: #fff;
   width: 200%; /* Deler bredden i halvdelen */
   border-radius: 10px;
 }
 
 .lease-container {
-  background-color: #fff; 
-  padding: 20px; 
+  background-color: #fff;
+  padding: 20px;
   width: 50%; /* Deler bredden i halvdelen */
   /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   text-align: left;
@@ -210,14 +210,13 @@ h2 {
 /* Grå boks med reminder - "påmindelse" */
 .reminder-list {
   background-color: rgb(231, 229, 229);
-  padding: 20px; 
+  padding: 20px;
   width: 50%; /* Deler bredden i halvdelen */
   /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   text-align: left;
   border-radius: 10px; /* Tilføjelse af afrundede kanter */
   margin: 10px; /* Tilføjelse af mellemrum mellem containere */
 }
-
 
 /* "Lejeaftaler" container */
 .container {
@@ -229,15 +228,14 @@ h2 {
   border-radius: 10px;
 }
 
-
 /* Runde hjørner til knap */
 .button-cornors {
   border-radius: 8px;
 }
 
 /*#createDamageReport*/
-.container-around-damage-report{
-  background-color: #fff; 
+.container-around-damage-report {
+  background-color: #fff;
   width: 100%; /* Deler bredden i halvdelen */
   border-radius: 10px;
 }
@@ -247,7 +245,7 @@ h2 {
   padding: 20px;
   text-align: right;
   max-width: 450px; /* Tilpas bredden efter dine ønsker */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto; /* Centrerer containeren */
   border-radius: 10px;
 }
@@ -269,7 +267,6 @@ h2 {
   text-align: left;
   max-width: 450px; /* Tilpas bredden efter dine ønsker */
   margin: 0 auto; /* Centrerer containeren */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-
 }
