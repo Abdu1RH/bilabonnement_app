@@ -228,3 +228,48 @@ h2 {
   margin: 0 auto; /* Centrerer containeren */
   border-radius: 10px;
 }
+
+
+/* Runde hjørner til knap */
+.button-cornors {
+  border-radius: 8px;
+}
+
+/*#createDamageReport*/
+.container-around-damage-report{
+  background-color: #fff; 
+  width: 100%; /* Deler bredden i halvdelen */
+  border-radius: 10px;
+}
+
+.damage-containers {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: right;
+  max-width: 450px; /* Tilpas bredden efter dine ønsker */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
+}
+
+/* Hvide bokse med informationer */
+.outer-damage-raport-small-containers {
+  background-color: rgb(231, 229, 229);
+  padding: 25px;
+  text-align: left;
+  max-width: 450px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  border-radius: 10px;
+}
+
+/* Hvide bokse med informationer */
+.inner-damage-raport-small-containers {
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+  text-align: left;
+  max-width: 450px; /* Tilpas bredden efter dine ønsker */
+  margin: 0 auto; /* Centrerer containeren */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px;
+
+}
