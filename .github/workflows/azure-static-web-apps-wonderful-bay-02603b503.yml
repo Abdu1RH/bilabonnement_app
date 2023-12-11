@@ -27,9 +27,9 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"
-          api_location: ""
+          api_location: "" 
           output_location: "build"
-          app_build_command: 'npm start'  # Change this to your actual start command
+          app_build_command: 'npm run build'  # Change this to your actual build command
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
