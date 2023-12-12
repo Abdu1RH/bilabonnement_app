@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import imgOfSubscription from "../img/Subscription.jpg";
 import imgOfDamageReport from "../img/DamageReport.jpg";
+import imgOfCars from "../img/carControl.jpg";
 
 function Home() {
   return (
@@ -55,7 +56,7 @@ function Home() {
           <div className="col-md-5 container-third p-3 mb-3">
             <h1>Rapportering og overvågning</h1>
             <img
-              src={imgOfDamageReport}
+              src={imgOfCars}
               alt="picture of a car condition report"
               className="image-size"
             />
