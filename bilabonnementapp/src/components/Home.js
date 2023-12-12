@@ -10,17 +10,9 @@ function Home() {
         <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">
-              Bilabonnement ssintern
+              Bilabonnement intern
             </a>
           </div>
-          {/* Din øverste menu */}
-          <ul className="nav navbar-nav">
-            <li className="nav-item">
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            {/* Andre menuelementer her */}
-            {/* Andre menuelementer her */}
-          </ul>
         </div>
       </nav>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
