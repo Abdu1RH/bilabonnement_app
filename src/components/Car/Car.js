@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 
 
-function Car() {
+function Car(props) {
     const { id } = useParams();
     const [cars, setCars] = useState([]);
     const [selectedCar, setSelectedCar] = useState(null);
@@ -22,6 +22,7 @@ function Car() {
 
     const handleSelectChange = (e) => {
         const selectedCarId = e.target.value;
+        props.sendToParent.carID = selectedCarId;
         const car = cars.find(car => car.id === parseInt(selectedCarId));
         setSelectedCar(car);
     };
@@ -29,7 +30,7 @@ function Car() {
     return (
 
         <div>
-            <h1>Hvilken bil skal tilknyttes lejeaftalen?</h1>
+            <h3>Hvilken bil skal tilknyttes lejeaftalen?</h3>
             {/* Dropedown menu */}
             <select name="carDropdown" id="carDropdown" onChange={handleSelectChange}>
                 <option value="">Vælg en bil</option>
@@ -46,14 +47,15 @@ function Car() {
 
             {selectedCar && (
                 <div>
-                    <h2>Du har nu valg: {selectedCar.brand}</h2>
+                    <h2>Valgt bil: {selectedCar.brand}</h2>
                     <div>
-                        <Link to={`/CreateCar/${selectedCar.id}`}> Opret en bil </Link> {/* Create*/}
-                        <Link to={`/EditCar/${selectedCar.id}`}> Rediger bil </Link> {/* Update*/}
-                        <Link to={`/DeleteCar/${selectedCar.id}`}> Slet bil </Link> {/* Delete */}
+                        {/*<Link to={`/CreateCar/${selectedCar.id}`}> Opret en bil </Link>  Create*/}
+                    {/*<Link to={`/EditCar/${selectedCar.id}`}> Rediger bil </Link>  Update*/}
+                        {/*<Link to={`/DeleteCar/${selectedCar.id}`}> Slet bil </Link>  Delete */}
 
                         <br />
-                        <Link to={`/createSubscription/${selectedCar.id}`}> Opret abonnement </Link>
+                       {/* <Link to={`/createSubscription/${selectedCar.id}`}> Opret abonnement </Link>*/}
+                       
                     </div>
 
                 </div>

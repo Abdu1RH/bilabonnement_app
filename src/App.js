@@ -24,7 +24,7 @@ function App() {
                 element={<CreateDamageReport />}
               />
               <Route path="/AvailableCarList" element={<AvailableCar />} />
-              <Route path="/ListOfCars" element={<Car />} />
+              <Route path="/ListOfCars" element={<CreateSubscription />} />
 
               <Route path="/CreateCar/:id" element={<Car />} />
               <Route path="/EditCar/:id" element={<EditCar />} />
