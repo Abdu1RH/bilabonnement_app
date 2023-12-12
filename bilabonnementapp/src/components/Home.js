@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import imgOfSubscription from "../img/Subscription.jpg";
 import imgOfDamageReport from "../img/DamageReport.jpg";
+import imgOfCars from "../img/carControl.jpg";
 
 function Home() {
   return (
@@ -9,17 +10,9 @@ function Home() {
         <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">
-              Bilabonnement ssintern
+              Bilabonnement intern
             </a>
           </div>
-          {/* Din øverste menu */}
-          <ul className="nav navbar-nav">
-            <li className="nav-item">
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            {/* Andre menuelementer her */}
-            {/* Andre menuelementer her */}
-          </ul>
         </div>
       </nav>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,7 +48,7 @@ function Home() {
           <div className="col-md-5 container-third p-3 mb-3">
             <h1>Rapportering og overvågning</h1>
             <img
-              src={imgOfDamageReport}
+              src={imgOfCars}
               alt="picture of a car condition report"
               className="image-size"
             />
