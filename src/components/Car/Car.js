@@ -17,7 +17,8 @@ function Car() {
             .catch(error => {
                 console.error("Error fetching cars", error);
             });
-    }, []);
+    }, []); 
+    
 
     const handleSelectChange = (e) => {
         const selectedCarId = e.target.value;
