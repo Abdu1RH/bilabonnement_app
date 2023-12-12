@@ -11,6 +11,9 @@ on:
 
 jobs:
   build_and_deploy_job:
+    env:
+        CI: false
+        REACT_APP_API_URL: https://happy-plant-0580fb203.4.azurestaticapps.net
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
