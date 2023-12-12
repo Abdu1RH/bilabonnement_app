@@ -11,6 +11,10 @@ on:
 
 jobs:
   build_and_deploy_job:
+    env: 
+      CI: false
+      REACT_APP_API_URL: https://ashy-bay-026366d03.4.azurestaticapps.net
+    
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
