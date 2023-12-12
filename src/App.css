@@ -205,6 +205,7 @@ h2 {
   text-align: left;
   border-radius: 10px; /* Tilføjelse af afrundede kanter */
   margin: 10px; /* Tilføjelse af mellemrum mellem containere */
+  font-size: 14px;
 }
 
 /* Grå boks med reminder - "påmindelse" */

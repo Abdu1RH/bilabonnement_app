@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios';
-
 import { useParams, useNavigate } from "react-router-dom";
 import Customer from "../Car/Customer";
+import Car from "../Car/Car";
 
 function CreateSubscription() {
     const navigate = useNavigate();
@@ -17,7 +17,6 @@ function CreateSubscription() {
 
     const handleCreate = (e) => {
         e.preventDefault();
-        newSubscription.carID = id;
         console.log(newSubscription);
         axios.post('http://localhost:8080/api/subscriptions', newSubscription)
             .then(() => navigate("/"))
@@ -33,9 +32,8 @@ function CreateSubscription() {
         <div className="container">
             <div className="inner-container">
                 <h1>Lejeaftaler</h1>
-                <p>Opret bil over xxx</p>
             </div>
-            <Customer sendToParent={newSubscription}/>
+
             <div className="row">
                 <div className="col-md-6">
                     <div className="container-around-lease-container">
@@ -43,7 +41,9 @@ function CreateSubscription() {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="subscription-container">
-                                        <h2>Abonnement information</h2>
+                                        <h1>Abonnement information</h1>
+                                        <Car sendToParent={newSubscription} handleChange={handleChange} />
+                                        <Customer sendToParent={newSubscription} handleChange={handleChange} />
                                         <form onSubmit={handleCreate}>
                                             <div className="mb-3">
                                                 <label htmlFor="startDate" className="form-label">Start Dato:</label>
@@ -57,24 +57,7 @@ function CreateSubscription() {
                                                 <label htmlFor="plannedDistance" className="form-label">Antal aftalt kørt km:</label>
                                                 <input type="number" className="form-control" id="plannedDistance" name="plannedDistanceInKilometers" value={newSubscription.plannedDistanceInKilometers} onChange={handleChange} />
                                             </div>
-
-                                            {/* Kommenteret kode
-                                        <div className="mb-3">
-                                            <label htmlFor="customer" className="form-label">Kunde:</label>
-                                            <input type="text" className="form-control" id="customer" name="customer" value={newSubscription.customer} onChange={handleChange} />
-                                        </div>
-                                        <div className="mb-3">
-                                            <label htmlFor="car" className="form-label">Bil:</label>
-                                            <input type="text" className="form-control" id="car" name="car" value={newSubscription.car} onChange={handleChange} />
-                                        </div>
-                                        */}
-
-                                            {/* Kode med Customer-komponenten */}
-                                            {/* <Customer /> */}
-
-                                            {/* Kode med Car-komponenten */}
-                                            {/* <Car/> */}
-                                            <button className="btn btn-primary" type="submit">Opret lejeaftale</button>
+                                            <button className="btn btn-primary" type="submit">Opret abonnementsaftale</button>
                                         </form>
                                     </div>
                                 </div>
@@ -88,7 +71,6 @@ function CreateSubscription() {
                                 <p>xxxx</p>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>

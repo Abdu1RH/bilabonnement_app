@@ -34,7 +34,7 @@ function Customer(props) {
     return (
        
             <div>
-                <h1>Kunder</h1>
+                <h3>Kunder</h3>
                 {/* Dropedown menu */}
                 <select name="customerDropdown" id="customerDropdown" onChange={handleSelectChange}>
                     <option value="">Vælg en kunde</option>
