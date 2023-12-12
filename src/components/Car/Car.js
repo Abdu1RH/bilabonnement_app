@@ -30,38 +30,34 @@ function Car(props) {
     return (
 
         <div>
-            <h3>Hvilken bil skal tilknyttes lejeaftalen?</h3>
-            {/* Dropedown menu */}
-            <select name="carDropdown" id="carDropdown" onChange={handleSelectChange}>
-                <option value="">Vælg en bil</option>
+      <h3>Hvilken bil skal tilknyttes lejeaftalen?</h3>
+      {/* Bootstrap Dropdown menu */}
+      <select className="form-control custom-dropdown" name="carDropdown" id="carDropdown" onChange={handleSelectChange}>
+        <option value="">Vælg en bil</option>
+        {cars.length > 0 &&
+          cars.map(car => (
+            <option key={car.id} value={car.id}>
+              {car.brand}
+            </option>
+          ))
+        }
+      </select>
 
-                {cars.length > 0 &&
-                    cars.map(car => (
-                        <option key={car.id} value={car.id}>
-                            {car.brand} {/* Read*/}
-
-                        </option>
-                    ))
-                }
-            </select>
-
-            {selectedCar && (
-                <div>
-                    <h2>Valgt bil: {selectedCar.brand}</h2>
-                    <div>
-                        {/*<Link to={`/CreateCar/${selectedCar.id}`}> Opret en bil </Link>  Create*/}
-                    {/*<Link to={`/EditCar/${selectedCar.id}`}> Rediger bil </Link>  Update*/}
-                        {/*<Link to={`/DeleteCar/${selectedCar.id}`}> Slet bil </Link>  Delete */}
-
-                        <br />
-                       {/* <Link to={`/createSubscription/${selectedCar.id}`}> Opret abonnement </Link>*/}
-                       
-                    </div>
-
-                </div>
-            )}
-
+      {selectedCar && (
+        <div>
+          <h2>Valgt bil: {selectedCar.brand}</h2>
+          <div>
+            {/* Her kan du tilføje links til at oprette, redigere eller slette biler */}
+            {/* Eksempel: */}
+            {/* <Link to={`/CreateCar/${selectedCar.id}`}> Opret en bil </Link> */}
+            {/* <Link to={`/EditCar/${selectedCar.id}`}> Rediger bil </Link> */}
+            {/* <Link to={`/DeleteCar/${selectedCar.id}`}> Slet bil </Link> */}
+            <br />
+            {/* <Link to={`/createSubscription/${selectedCar.id}`}> Opret abonnement </Link> */}
+          </div>
         </div>
+      )}
+    </div>
 
     );
 }

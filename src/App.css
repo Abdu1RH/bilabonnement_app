@@ -1,4 +1,4 @@
-/* Container - opret lejeaftale*/
+/* Forside: Container - opret lejeaftale*/
 .container-primary {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
@@ -8,7 +8,7 @@
   border-radius: 10px; /* rounded corners */
 }
 
-/* Container - opret skaderaport*/
+/* Forside: Container - opret skaderaport*/
 .container-secondary {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
@@ -18,7 +18,7 @@
   border-radius: 10px; /* rounded corners */
 }
 
-/* Container - Rapportering og overvågning*/
+/* Forside: Container - Rapportering og overvågning*/
 .container-third {
   background-color: rgb(229, 229, 229); /* light grey */
   margin-top: 15px;
@@ -28,18 +28,14 @@
   border-radius: 10px; /* rounded corners */
 }
 
+/* Forside: de 3 container bredde */
 .col-2 {
   width: 20px;
 }
 
-/* overskrift størrelse på de 2 øverste containers*/
+/* Forside: overskrift størrelse på de 2 øverste containers*/
 h1 {
   font-size: 30px;
-}
-
-/* overskrift størrelse på de 3 nederste containers*/
-h2 {
-  font-size: 15px;
 }
 
 /* Menu bar - Bilabonnement intern / menu farve*/
@@ -57,7 +53,7 @@ h2 {
 
 /* Sidebar farve */
 .sidenav {
-  height: 92.8%;
+  height: 93.5%;
   width: 55px;
   position: fixed;
   z-index: 1;
@@ -192,7 +188,7 @@ h2 {
 /*#createSubscription*/
 /* "Abonnementsinformation" og "Kunde information" og "bil information" - container */
 .container-around-lease-container {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 200%; /* Deler bredden i halvdelen */
   border-radius: 10px;
 }
@@ -200,7 +196,7 @@ h2 {
 .lease-container {
   background-color: #fff;
   padding: 20px;
-  width: 50%; /* Deler bredden i halvdelen */
+  width: 70%; /* Deler bredden i halvdelen */
   /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   text-align: left;
   border-radius: 10px; /* Tilføjelse af afrundede kanter */
@@ -271,3 +267,23 @@ h2 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+/* CustomDropdown.css */
+.custom-dropdown {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black; /* Tekstfarven */
+}
+
+/* inputfelter i createSubscription */
+.form-control {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn-primary {
+  background-color: rgb(80, 140, 188);
+}
+
+.subscription-container h1 {
+  font-size: 24px; /* Juster størrelsen efter dit behov */
+}
+

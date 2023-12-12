@@ -61,15 +61,8 @@ function CreateSubscription() {
                                         </form>
                                     </div>
                                 </div>
+                                
                             </div>
-                        </div>
-                        <div className="lease-container">
-                            <ul className="reminder-list">
-                                <p>Påmindelse:</p>
-                                <p>Ansøg om kundens skatteforhold og RKI informationer</p>
-                                <p>xxxx</p>
-                                <p>xxxx</p>
-                            </ul>
                         </div>
                     </div>
                 </div>
