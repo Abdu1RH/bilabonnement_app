@@ -1,69 +1,96 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useParams, useNavigate } from "react-router-dom";
+import Subscription from "./Subscription";
 
-function CreateSubscription() {
-    const navigate = useNavigate();
+function EditSubscription() {
     const { id } = useParams();
-    const [newSubscription, setNewSubscription] = useState({
+    const navigate = useNavigate();
+    const [subscription, setSubscription] = useState({
         startDate: '',
         endDate: '',
         carID: 0,
         customerID: 0,
+        car: {},
+        customer: {},
         plannedDistanceInKilometers: 0,
     });
 
-    const handleCreate = (e) => {
+    useEffect(() => {
+        axios.get(`http://localhost:8080/api/subscription/${id}`)
+            .then(response => setSubscription(response.data))
+            .catch(error => console.error('Error fetching subscription:', error));
+    }, [id]);
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(newSubscription);
-        axios.post('http://localhost:8080/api/subscriptions', newSubscription)
-            .then(() => navigate("/"))
-            .catch(error => console.error("Error creating subscription", error));
+        axios.put(`http://localhost:8080/api/subscriptions/${id}`, subscription)
+            .then(() => navigate('/'))
+            .catch(error => console.error('Error updating subscription:', error));
+
+        
     };
 
     const handleChange = (e) => {
-        const value = e.target.type === 'input' ? e.target.checked : e.target.value;
-        setNewSubscription({ ...newSubscription, [e.target.name]: value });
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        setSubscription({ ...subscription, [e.target.name]: value });
     };
 
     return (
-        <div className="container">
-            <div className="inner-container">
-                <h1>Lejeaftaler</h1>
-            </div>
-
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="container-around-lease-container">
-                        <div className="lease-container">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="subscription-container">
-                                        <h1>Abonnement information</h1>
-                                        <form onSubmit={handleCreate}>
-                                            <div className="mb-3">
-                                                <label htmlFor="startDate" className="form-label">Start Dato:</label>
-                                                <input type="date" className="form-control" id="startDate" name="startDate" value={newSubscription.startDate} onChange={handleChange} />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="endDate" className="form-label">Slut dato:</label>
-                                                <input type="date" className="form-control" id="endDate" name="endDate" value={newSubscription.endDate} onChange={handleChange} />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="plannedDistance" className="form-label">Antal aftalt kørt km:</label>
-                                                <input type="number" className="form-control" id="plannedDistance" name="plannedDistanceInKilometers" value={newSubscription.plannedDistanceInKilometers} onChange={handleChange} />
-                                            </div>
-                                            <button className="btn btn-primary" type="submit">Opret abonnementsaftale</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div>
+            
+            <h2>Opdatere abonnement</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Start Date:</label>
+                    <input
+                        type="date"
+                        name="startDate"
+                        value={subscription.startDate}
+                        onChange={handleChange}
+                    />
                 </div>
-            </div>
+                <div>
+                    <label>End Date:</label>
+                    <input
+                        type="date"
+                        name="endDate"
+                        value={subscription.endDate}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Car ID:</label>
+                    <input
+                        type="number"
+                        name="carID"
+                        value={subscription.car.id}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Customer ID:</label>
+                    <input
+                        type="number"
+                        name="customerID"
+                        value={subscription.customer.id}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Planned Distance (in kilometers):</label>
+                    <input
+                        type="number"
+                        name="plannedDistanceInKilometers"
+                        value={subscription.plannedDistanceInKilometers}
+                        onChange={handleChange}
+                    />
+                </div>
+                <button type="submit">Update Subscription</button>
+            </form>
+
         </div>
     );
 }
 
-export default CreateSubscription;
+export default EditSubscription;

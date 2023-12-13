@@ -102,8 +102,11 @@ const handleCreate = (e) => {
                     </div>
                 </div>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default CreateDamageReport;

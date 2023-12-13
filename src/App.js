@@ -12,6 +12,9 @@ import "./App.css";
 import EditCar from "./components/Car/EditCar";
 import CreateCar from "./components/Car/CreateCar";
 import DeleteCar from "./components/Car/DeleteCar";
+import EditSubscription from "./components/Subscription/EditSubscription";
+import ListOfSubscriptions from "./components/Subscription/ListOfSubscriptions";
+import DeleteSubscription from "./components/Subscription/DeleteSubscription";
 
 function App() {
   return (
@@ -21,12 +24,15 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" exact element={<Home />} />
-              <Route
-                path="/CreateDamageReport"
-                element={<CreateDamageReport />}
-              />
+              <Route path="/CreateDamageReport"element={<CreateDamageReport />} />
+              <Route path="/EditSubscription/:id"element={<EditSubscription />} />
+              <Route path="/DeleteSubscription/:id"element={<DeleteSubscription />} />
+
+
               <Route path="/AvailableCarList" element={<AvailableCar />} />
-              <Route path="/ListOfCars" element={<CreateSubscription />} />
+             {/* <Route path="/ListOfCars" element={<CreateSubscription />} />*/}
+             <Route path="/ListOfCars" element={<CreateSubscription />}/>
+              <Route path="/ListOfSubscriptions" element={<ListOfSubscriptions />} />
 
               <Route path="/CreateCar/:id" element={<Car />} />
               <Route path="/EditCar/:id" element={<EditCar />} />
