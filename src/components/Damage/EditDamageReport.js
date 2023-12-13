@@ -1,84 +1,102 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-
-function EditDamageReport(){
-    const {id} = useParams();
+function EditDamageReport() {
+    const { id } = useParams();
     const navigate = useNavigate();
-    const [damageReport, setNewDamageReport] = useState({
-        error: "",
-        errorType: "", 
-        numberOfErrors: 0,
-        pricePerError: 0.0,
-    })
+    const [damageReports, setDamageReports] = useState([]);
+    const [selectedDamageReport, setSelectedDamageReport] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/damage/${id}`)
-            .then(response => setNewDamageReport(response.data))
-            .catch(error => console.error('Error fetching damage:', error));
+        // Fetch the list of damage reports
+        axios.get('http://localhost:8080/api/damagereports')
+            .then(response => {
+                const reports = response.data.map(report => ({ ...report, numbersOfErrors: report.numbersOfErrors || 0 }));
+                setDamageReports(reports);
+
+                // Set the initially selected damage report based on the provided ID
+                const initialSelected = reports.find(report => report.id === parseInt(id));
+                setSelectedDamageReport(initialSelected || null);
+            })
+            .catch(error => console.error('Error fetching damage reports:', error));
     }, [id]);
 
-    
-    const handleCreate = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8080/api/damages/${id}`, damageReport)
-            .then(() => navigate('/'))
-            .catch(error => console.error('Error updating damage:', error));
+        if (selectedDamageReport) {
+            axios.put(`http://localhost:8080/api/damagereports/${selectedDamageReport.id}`, selectedDamageReport)
+                .then(() => navigate('/'))
+                .catch(error => console.error('Error updating damage report:', error));
+        }
     };
-    
-    
-    const handleEdit = (e) => {
-        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-        setDamageReport({ ...damageReport, [e.target.name]: value });
+
+    const handleSelectChange = (e) => {
+        const selectedId = e.target.value;
+        const selectedReport = damageReports.find(report => report.id === parseInt(selectedId));
+        setSelectedDamageReport(selectedReport || null);
     };
 
     return (
         <div>
-            <h1>Edit damage report</h1>
-            <form onSubmit={handleCreate}>
-                <div>
-                    <label>Error</label>
-                    <input 
-                        type='string'
-                        name='error'
-                        value={damageReport.error}
-                        onChange={handleEdit}
-                    />
-                </div>
-                
-                <div>
-                    <label>Error type</label>
-                    <input
-                        type='string'
-                        name='error type'
-                        value={damageReport.errorType}
-                        onChange={handleEdit}
-                    />
-                </div>
+            <h1>Opdater skaderapport</h1>
+<br></br>
+            <label>Valgte skaderapport:</label>
+            <select value={selectedDamageReport?.id} onChange={handleSelectChange}>
+                <option value=""> Vælg en skaderapport her</option>
+                {damageReports.map(report => (
+                    <option key={report.id} value={report.id}>
+                    {report.id} -  {report.error} - {report.errorType} - {report.subscription.car.brand}
+                    </option>
+                ))}
+            </select>
 
-                <div>
-                    <label>Number of errors</label>
-                    <input
-                        type='number'
-                        name='number of errors'
-                        value={damageReport.numberOfErrors}
-                        onChange={handleEdit}
-                    />
-                </div>
+            {selectedDamageReport && (
+                <form onSubmit={handleUpdate}>
+                    {/* Display other fields for the selected damage report */}
+                    <div>
+                        <label>Skade:</label>
+                        <input
+                            type='text'
+                            name='error'
+                            value={selectedDamageReport.error}
+                            onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, error: e.target.value }))}
+                        />
+                    </div>
 
-                <div>
-                    <label>Price per error</label>
-                    <input
-                        type='number'
-                        name='price per error'
-                        value={damageReport.pricePerError}
-                    />
-                </div>
-                <button type='submit'>Update damage report</button>
-            </form>
+                    <div>
+                        <label>Skade type:</label>
+                        <input
+                            type='text'
+                            name='errorType'
+                            value={selectedDamageReport.errorType}
+                            onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, errorType: e.target.value }))}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Antal skader:</label>
+                        <input
+                            type='number'
+                            name='numbersOfErrors'
+                            value={selectedDamageReport.numbersOfErrors}
+                            onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, numbersOfErrors: parseInt(e.target.value) || 0 }))}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Pris pr skade:</label>
+                        <input
+                            type='number'
+                            name='pricePerError'
+                            value={selectedDamageReport.pricePerError}
+                            onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, pricePerError: e.target.value }))}
+                        />
+                    </div>
+                    <button type='submit'>Opdater skaderapport</button>
+                </form>
+            )}
         </div>
-    )
+    );
 }
-
 
 export default EditDamageReport;
