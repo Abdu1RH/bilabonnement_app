@@ -121,7 +121,8 @@ h1 {
 }
 
 /* Titel - Ledige biler #ListOfAvailableCars og "Lejeaftaler - #createSubscription/Chevrolet, AB 12345 */
-.inner-container {
+.inner-container,
+.damage-headline {
   margin: 20px;
   text-align: left; /* Placerer teksten til venstre */
 }
@@ -237,14 +238,15 @@ h1 {
   border-radius: 10px;
 }
 
-.damage-containers {
+.outer-container {
   background-color: rgb(255, 255, 255);
-  padding: 20px;
-  text-align: right;
-  max-width: 450px; /* Tilpas bredden efter dine ønsker */
+  padding: 50px;
+  text-align: start;
+  width: 90%; /* Tilpas bredden efter dine ønsker */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Centrerer containeren */
-  border-radius: 10px;
+  margin-right: 950px;
+  margin-left: 20px;
+  border-radius: 10px; /* rounded corners */
 }
 
 /* Hvide bokse med informationer */
@@ -254,7 +256,7 @@ h1 {
   text-align: left;
   max-width: 450px; /* Tilpas bredden efter dine ønsker */
   margin: 0 auto; /* Centrerer containeren */
-  border-radius: 10px;
+  border-radius: 10px; /* rounded corners */
 }
 
 /* Hvide bokse med informationer */
@@ -277,6 +279,7 @@ h1 {
 /* inputfelter i createSubscription */
 .form-control {
   background-color: rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }
 
 .btn.btn-primary {
@@ -287,3 +290,24 @@ h1 {
   font-size: 24px; /* Juster størrelsen efter dit behov */
 }
 
+/* Tekst størrelse for 'abonnementer' i Skade og udbedring */
+.subscription-title {
+  margin-right: 900px;
+  font-size: 20px;
+}
+
+.createDamageReport-btn {
+  background-color: rgb(80, 140, 188);
+  color: #fff;
+  width: 200px;
+  border-radius: 10px;
+}
+
+#subscriptionDropdown {
+  margin-right: 900px;
+}
+
+.damage-containers {
+  font-size: large;
+  margin-right: 800px;
+}
