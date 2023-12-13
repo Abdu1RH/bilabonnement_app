@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { useParams, useNavigate, Link } from "react-router-dom";
-import Customer from "../Car/Customer";
-import Car from "../Car/Car";
+import { useParams, useNavigate } from "react-router-dom";
 
 function CreateSubscription() {
     const navigate = useNavigate();
@@ -42,8 +40,6 @@ function CreateSubscription() {
                                 <div className="col-md-6">
                                     <div className="subscription-container">
                                         <h1>Abonnement information</h1>
-                                        <Car sendToParent={newSubscription} handleChange={handleChange} />
-                                        <Customer sendToParent={newSubscription} handleChange={handleChange} />
                                         <form onSubmit={handleCreate}>
                                             <div className="mb-3">
                                                 <label htmlFor="startDate" className="form-label">Start Dato:</label>
@@ -61,9 +57,6 @@ function CreateSubscription() {
                                         </form>
                                     </div>
                                 </div>
-
-                                <Link to={`/EditSubscription/${newSubscription.id}`}> Updaterer abonnementet </Link>
-                                <Link to={`/DeleteSubscription/${newSubscription.id}`}> Slet abonnement </Link>
                             </div>
                         </div>
                     </div>
