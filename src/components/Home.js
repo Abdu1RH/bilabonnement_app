@@ -26,7 +26,7 @@ function Home() {
               className="image-size"
             />
             {/* Administrer lejeaftale knap */}
-            <Link to="/ListOfCars" className="btn btn-info btn-overlay">
+            <Link to="/ListOfSubscriptions" className="btn btn-info btn-overlay">
               Administrer lejeaftale
             </Link>
           </div>
