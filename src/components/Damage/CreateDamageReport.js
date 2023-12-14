@@ -54,49 +54,60 @@ const handleCreate = (e) => {
                                     <div className="subscription-container">
                                         <form onSubmit={handleCreate}>
                                             <div>
-                                                <label>Skade:</label>
+                                                <label className="alignText">Skade:</label>
                                                 <input
                                                     type='text'
                                                     name='error'
                                                     value={newDamageReport.error}
+                                                    className="damageReport-btn"
                                                     onChange={handleChange}
                                                 />
                                             </div>
                                             <div>
-                                                <label>Type af skade:</label>
+                                                <label className="alignText" >Type af skade:</label>
                                                 <input
                                                     type='text'
                                                     name='errorType'
                                                     value={newDamageReport.errorType}
+                                                    className="damageReport-btn"
                                                     onChange={handleChange}
                                                 />
                                             </div>
                                             <div>
-                                                <label>Antal skader:</label>
+                                                <label className="alignText">Antal skader:</label>
                                                 <input
                                                     type='number'
                                                     name='numberOfErrors'
                                                     value={newDamageReport.numbersOfErrors}
+                                                    className="damageReport-btn"
                                                     onChange={handleChange}
                                                 />
                                             </div>
                                             <div>
-                                                <label>Pris pr skade:</label>
+                                                <label className="alignText">Pris pr skade:</label>
                                                 <input
                                                     type='number'
                                                     name='pricePerError'
                                                     value={newDamageReport.pricePerError}
+                                                    className="damageReport-btn"
                                                     onChange={handleChange}
                                                 />
                                             </div>
-                                            <button type='submit'>Opret skaderaport</button>
+                                            <button className="createDamageReport-btn" type='submit'>Opret skaderaport</button>
                                         </form>
                                     </div>
                                 </div>
+                                <div>
+                                <button className="editDamageReport-btn"> 
+                                  <Link className="linkColor" to={`/EditDamageReport/${newDamageReport.id}`}> Opdater skaderapport </Link>
+                                  </button>
+                                </div>
 
-                                <Link to={`/EditDamageReport/${newDamageReport.id}`}> Opdater skaderapport </Link>
-                                <Link to={`/DeleteDamageReport/${newDamageReport.id}`}> Slet skaderapport </Link>
-
+                                <div>
+                                <button className="deleteDamageReport-btn"> 
+                                <Link className="linkColor" to={`/DeleteDamageReport/${newDamageReport.id}`}> Slet skaderapport </Link>
+                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
