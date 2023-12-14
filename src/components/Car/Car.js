@@ -27,7 +27,7 @@ function Car(props) {
     };
 
     return (
-
+ 
         <div>
       <p>Hvilken bil skal tilknyttes lejeaftalen?</p>
       {/* Bootstrap Dropdown menu */}

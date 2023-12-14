@@ -50,7 +50,7 @@ function CreateSubscription() {
                     <Customer
                       sendToParent={newSubscription}
                       handleChange={handleChange}
-                    />
+                    /> 
                     <form onSubmit={handleCreate}>
                       <div className="mb-3">
                         <label htmlFor="startDate" className="form-label">

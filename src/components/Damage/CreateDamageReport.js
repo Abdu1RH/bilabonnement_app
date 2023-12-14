@@ -91,7 +91,7 @@ const handleCreate = (e) => {
                                                     value={newDamageReport.pricePerError}
                                                     className="damageReport-btn"
                                                     onChange={handleChange}
-                                                />
+                                                /> 
                                             </div>
                                             <button className="createDamageReport-btn" type='submit'>Opret skaderaport</button>
                                         </form>
