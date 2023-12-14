@@ -84,6 +84,8 @@ function EditSubscription() {
                         name="plannedDistanceInKilometers"
                         value={subscription.plannedDistanceInKilometers}
                         onChange={handleChange}
+                        min={1} 
+                        max={1000000}
                     />
                 </div>
                 <button type="submit">Update Subscription</button>

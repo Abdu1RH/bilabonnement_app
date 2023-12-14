@@ -89,6 +89,8 @@ function CreateSubscription() {
                           name="plannedDistanceInKilometers"
                           value={newSubscription.plannedDistanceInKilometers}
                           onChange={handleChange}
+                          min={1} 
+                          max={10000000}
                         />
                       </div>
                       <button className="createDamageReport-btn" type="submit">

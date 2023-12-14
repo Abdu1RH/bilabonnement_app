@@ -80,12 +80,12 @@ function EditDamageReport() {
                             value={selectedDamageReport.numbersOfErrors}
                             onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, numbersOfErrors: parseInt(e.target.value) || 0 }))}
                             min={1} 
-                            max={5}
+                            max={100000}
                         />
                     </div>
 
                     <div>
-                        <label>Pris pr skade:</label>
+                        <label>Total pris af skader:</label>
                         <input
                             type='number'
                             name='pricePerError'
