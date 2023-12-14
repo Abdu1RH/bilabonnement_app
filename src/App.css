@@ -99,6 +99,7 @@ h1 {
   display: flex;
 }
 
+
 /* Container for .car-container */
 .container-gray {
   background-color: rgb(231, 229, 229);
@@ -288,6 +289,7 @@ h1 {
 
 .subscription-container h1 {
   font-size: 24px; /* Juster størrelsen efter dit behov */
+  
 }
 
 /* Tekst størrelse for 'abonnementer' i Skade og udbedring */
@@ -297,14 +299,33 @@ h1 {
   text-align: left;
 }
 
-.createDamageReport-btn {
-  background-color: rgb(80, 140, 188);
+.editDamageReport-btn {
+  background-color: rgb(224, 203, 42);
   color: #fff;
   width: 210px;
   height: 40px;
   border-radius: 10px;
-  border-color: rgb(80, 140, 188);
-  margin-top: 30px;
+  border-color: rgb(224, 203, 42);
+  margin-top: 20px;
+}
+
+.createDamageReport-btn {
+  background-color: rgb(94, 188, 80);
+  color: #fff;
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  border-color: rgb(94, 188, 80);
+  margin-top: 20px;
+}
+.deleteDamageReport-btn {
+  background-color: rgb(188, 80, 80);
+  color: #fff;
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  border-color: rgb(188, 80, 80);
+  margin-top: 20px;
 }
 
 #subscriptionDropdown {
@@ -321,4 +342,22 @@ h1 {
 .damage-containers {
   font-size: large;
   margin-right: 800px;
+}
+
+.damageReport-btn {
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(229, 229, 229);
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.linkColor {
+color:#fff;
+}
+
+.alignText {
+  text-align: left;
+  width: 150px;
 }
