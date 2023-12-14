@@ -20,7 +20,7 @@ function CreateSubscription() {
     console.log(newSubscription);
     axios
       .post("http://localhost:8080/api/subscriptions", newSubscription)
-      .then(() => navigate("/"))
+      .then(() => navigate("/ListOfSubscriptions"))
       .catch((error) => console.error("Error creating subscription", error));
   };
 

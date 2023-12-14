@@ -10,7 +10,7 @@ function CreateDamageReport() {
     const [newDamageReport, setNewDamageReport] = useState({
         error: "",
         errorType: "",
-        numbersOfErrors: 0,
+        numberOfErrors: 0,
         pricePerError: 0.0,
     });
 /*

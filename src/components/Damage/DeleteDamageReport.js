@@ -22,7 +22,7 @@ function DeleteDamageReport() {
     const handleDelete = (selectedDamageReportId) => {
         axios.delete(`http://localhost:8080/api/damageReports/${selectedDamageReportId}`)
             .then(() => {
-                navigate('/');
+                navigate('/createDamageReport');
             })
             .catch(error => {
                 console.error('Error deleting damage report:', error);

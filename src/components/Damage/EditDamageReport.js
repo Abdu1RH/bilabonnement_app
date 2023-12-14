@@ -24,7 +24,7 @@ function EditDamageReport() {
         e.preventDefault();
         if (selectedDamageReport) {
             axios.put(`http://localhost:8080/api/damagereports/${selectedDamageReport.id}`, selectedDamageReport) // Tilføj backticks omkring URL'en
-                .then(() => navigate('/'))
+                .then(() => navigate('/createDamageReport'))
                 .catch(error => console.error('Error updating damage report:', error));
         }
     };
@@ -79,6 +79,8 @@ function EditDamageReport() {
                             name='numbersOfErrors'
                             value={selectedDamageReport.numbersOfErrors}
                             onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, numbersOfErrors: parseInt(e.target.value) || 0 }))}
+                            min={1} 
+                            max={5}
                         />
                     </div>
 
@@ -89,6 +91,8 @@ function EditDamageReport() {
                             name='pricePerError'
                             value={selectedDamageReport.pricePerError}
                             onChange={(e) => setSelectedDamageReport(prev => ({ ...prev, pricePerError: e.target.value }))}
+                            min={1} 
+                            max={100000}
                         />
                     </div>
                     <button type='submit'>Opdater skaderapport</button>

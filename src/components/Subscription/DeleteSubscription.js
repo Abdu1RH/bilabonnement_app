@@ -19,7 +19,7 @@ function DeleteSubscription() {
         console.log('Deleting subscription with ID:', id);
         axios.delete(`http://localhost:8080/api/subscriptions/${id}`)
             .then(() => {
-                navigate('/');
+                navigate('/ListOfSubscriptions');
             })
             .catch(error => console.error('Error deleting subscription:', error));
     };
