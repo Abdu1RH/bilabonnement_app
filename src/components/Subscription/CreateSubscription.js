@@ -99,23 +99,6 @@ function CreateSubscription() {
                     </form>
                   </div>
                 </div>
-                <div>
-                <button className="editDamageReport-btn">
-                <Link className="linkColor"  to={`/EditSubscription/${newSubscription.id}`}>
-                  {" "}
-                  Updaterer abonnementet{" "}
-                </Link>
-                </button>
-                </div>
-
-                <div>
-                <button className="deleteDamageReport-btn">
-                <Link className="linkColor"  to={`/DeleteSubscription/${newSubscription.id}`}>
-                  {" "}
-                  Slet abonnement{" "}
-                </Link>
-                </button>
-                </div>
               </div>
             </div>
           </div>
