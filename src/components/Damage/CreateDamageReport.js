@@ -93,7 +93,7 @@ const handleCreate = (e) => {
                                                     onChange={handleChange}
                                                 />
                                             </div>
-                                            <button className="createDamageReport-btn" type='submit'>Opret skaderaport</button>
+                                            <button className="createDamageReport-btn" type='submit'>Opret skaderapport</button>
                                         </form>
                                     </div>
                                 </div>

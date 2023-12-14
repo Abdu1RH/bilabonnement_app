@@ -34,7 +34,7 @@ function Customer(props) {
     return (
        
             <div>
-                <h3>Kunder</h3>
+                <p>Kunder</p>
                 {/* Dropedown menu */}
                 <select className="form-control custom-dropdown" name="customerDropdown" id="customerDropdown" onChange={handleSelectChange}>
                     <option value="">Vælg en kunde</option>
