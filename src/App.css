@@ -294,6 +294,7 @@ h1 {
 .subscription-title {
   margin-right: 900px;
   font-size: 20px;
+  text-align: left;
 }
 
 .createDamageReport-btn {
@@ -303,10 +304,18 @@ h1 {
   height: 40px;
   border-radius: 10px;
   border-color: rgb(80, 140, 188);
+  margin-top: 30px;
 }
 
 #subscriptionDropdown {
   margin-right: 900px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 210px;
+  height: 40px;
+  border-color: #fff;
+  margin-bottom: 10px;
+  float: left;
 }
 
 .damage-containers {
