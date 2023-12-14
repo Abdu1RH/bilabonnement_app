@@ -13,17 +13,8 @@ function CreateDamageReport() {
         numberOfErrors: 0,
         pricePerError: 0.0,
     });
-/*
-    const handleCreate = (e) => {
-        e.preventDefault();
-        axios.post("http://localhost:8080/api/damagereports", newDamageReport)
-            .then(() => navigate("/"))
-            .catch(error => console.error("Error creating damage report", error));
-    };
-                                    <Link to={`/DeleteDamageReport/${newDamageReport.id}`}> Slet skade rapport </Link>
 
-*/
-
+    
 const handleCreate = (e) => {
     e.preventDefault();
     axios.post("http://localhost:8080/api/damagereports", newDamageReport)

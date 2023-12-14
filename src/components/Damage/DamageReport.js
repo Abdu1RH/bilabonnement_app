@@ -22,7 +22,6 @@ function DamageReport(props) {
         const damageReport = damageReports.find(report => report.id === parseInt(selectedDamageReportId));
         setSelectedDamageReport(damageReport);
 
-        // Call the function provided in the sendToParent prop with the selected damage report ID
         if (typeof props.sendToParent === 'function') {
             props.sendToParent(selectedDamageReportId);
         }
@@ -45,7 +44,6 @@ function DamageReport(props) {
             {selectedDamageReport && (
                 <div>
                     <h2>Selected damage report: {selectedDamageReport.id}</h2>
-                    {/* Add additional information or components for the selected damage report */}
                 </div>
             )}
         </div>

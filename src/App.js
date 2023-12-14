@@ -30,14 +30,12 @@ function App() {
 
 
               <Route path="/AvailableCarList" element={<AvailableCar />} />
-             {/* <Route path="/ListOfCars" element={<CreateSubscription />} />*/}
              <Route path="/ListOfCars" element={<CreateSubscription />}/>
               <Route path="/ListOfSubscriptions" element={<ListOfSubscriptions />} />
 
               <Route path="/CreateCar/:id" element={<Car />} />
               <Route path="/EditCar/:id" element={<EditCar />} />
               <Route path="/DeleteCar/:id" element={<DeleteCar />} />
-              {/* Rute til CreateSubscription med bilnavn som parameter */}
               <Route
                 path="/createSubscription/:id"
                 element={<CreateSubscription />}

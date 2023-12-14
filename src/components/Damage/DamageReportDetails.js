@@ -7,7 +7,7 @@ function DamageReportDetails() {
   const [damageReport, setDamageReport] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/damagereports/${id}`) // Tilføj backticks omkring URL'en
+    axios.get(`http://localhost:8080/api/damagereports/${id}`)
       .then(response => {
         setDamageReport(response.data);
       })
@@ -22,7 +22,6 @@ function DamageReportDetails() {
       <p>Error Type: {damageReport.errorType}</p>
       <p>Number of Errors: {damageReport.numberOfErrors}</p>
       <p>Price per Error: {damageReport.pricePerError}</p>
-      {/* Add other details as needed */}
     </div>
   );
 }

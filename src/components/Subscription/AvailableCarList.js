@@ -6,7 +6,7 @@ function AvailableCar() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/cars") // Replace with the actual API endpoint for cars
+      .get("http://localhost:8080/api/cars")
       .then((response) => {
         setCars(response.data);
       })
@@ -16,7 +16,7 @@ function AvailableCar() {
   const availableCars = cars.filter((car) => car.carAvailable);
   const rentedCars = cars.filter((car) => !car.carAvailable);
 
-  // Calculate total price and details for rented cars
+ 
   const totalDetailsRentedCars = rentedCars.map((car) => ({
     id: car.id,
     brand: car.brand,
@@ -62,7 +62,6 @@ function AvailableCar() {
           </ul>
         </div>
 
-        {/* Third container with total price and details for rented cars */}
         <div className="car-container">
           <ul className="rented-car-list">
             <p>Hvad er den sammenlagte pris på de nuværende udlejede biler?</p>

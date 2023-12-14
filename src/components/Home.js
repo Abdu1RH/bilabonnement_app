@@ -17,7 +17,7 @@ function Home() {
       </nav>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          {/* Opret lejeaftale container */}
+
           <div className="col-md-5 container-primary p-3 mb-3">
             <h1>Lejeaftaler </h1>
             <img
@@ -25,14 +25,13 @@ function Home() {
               alt="picture of a rental contract"
               className="image-size"
             />
-            {/* Administrer lejeaftale knap */}
+
             <Link to="/ListOfSubscriptions" className="btn btn-info btn-overlay">
               Administrer lejeaftale
             </Link>
           </div>
-          {/* Mellemrum mellem containere */}
+
           <div className="col-2"></div>
-          {/* Opret skaderapport container */}
           <div className="col-md-5 container-secondary p-3 mb-3">
             <h1>Skade og udbedring</h1>
             <img
