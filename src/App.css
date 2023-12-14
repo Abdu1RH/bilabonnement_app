@@ -299,8 +299,10 @@ h1 {
 .createDamageReport-btn {
   background-color: rgb(80, 140, 188);
   color: #fff;
-  width: 200px;
+  width: 210px;
+  height: 40px;
   border-radius: 10px;
+  border-color: rgb(80, 140, 188);
 }
 
 #subscriptionDropdown {
