@@ -25,7 +25,7 @@ function EditSubscription() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.put(`http://localhost:8080/api/subscriptions/${id}`, subscription)
-            .then(() => navigate('/'))
+            .then(() => navigate('/ListOfSubscriptions'))
             .catch(error => console.error('Error updating subscription:', error));
 
         
