@@ -83,7 +83,7 @@ h1 {
 /*"Opret lejeaftale" knap og billede placering: */
 .image-size {
   width: 100%;
-  height: auto;
+  height: 400px;
   border-radius: 10px; /* rounded corners */
 }
 
