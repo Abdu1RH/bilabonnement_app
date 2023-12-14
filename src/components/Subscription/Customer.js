@@ -69,6 +69,8 @@ function Customer() {
             name="cpr"
             value={customer.cpr}
             onChange={handleChange}
+            min={1} 
+            max={8}
           />
         </div>
         <div className="mb-3">
@@ -82,6 +84,8 @@ function Customer() {
             name="accountNumber"
             value={customer.accountNumber}
             onChange={handleChange}
+            min={1} 
+            max={10}
           />
         </div>
       

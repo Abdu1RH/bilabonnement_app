@@ -13,27 +13,27 @@ function CreateDamageReport() {
         numberOfErrors: 0,
         pricePerError: 0.0,
     });
-/*
+    /*
+        const handleCreate = (e) => {
+            e.preventDefault();
+            axios.post("http://localhost:8080/api/damagereports", newDamageReport)
+                .then(() => navigate("/"))
+                .catch(error => console.error("Error creating damage report", error));
+        };
+                                        <Link to={`/DeleteDamageReport/${newDamageReport.id}`}> Slet skade rapport </Link>
+    
+    */
+
     const handleCreate = (e) => {
         e.preventDefault();
         axios.post("http://localhost:8080/api/damagereports", newDamageReport)
-            .then(() => navigate("/"))
+            .then((response) => {
+                setNewDamageReport({ ...newDamageReport, id: response.data.id });
+                navigate("/");
+            })
             .catch(error => console.error("Error creating damage report", error));
     };
-                                    <Link to={`/DeleteDamageReport/${newDamageReport.id}`}> Slet skade rapport </Link>
 
-*/
-
-const handleCreate = (e) => {
-    e.preventDefault();
-    axios.post("http://localhost:8080/api/damagereports", newDamageReport)
-      .then((response) => {
-        setNewDamageReport({ ...newDamageReport, id: response.data.id });
-        navigate("/");
-      })
-      .catch(error => console.error("Error creating damage report", error));
-  };
-  
     const handleChange = (e) => {
         const value = e.target.type === 'input' ? e.target.checked : e.target.value;
         setNewDamageReport({ ...newDamageReport, [e.target.name]: value });
@@ -78,15 +78,19 @@ const handleCreate = (e) => {
                                                     name='numberOfErrors'
                                                     value={newDamageReport.numbersOfErrors}
                                                     onChange={handleChange}
+                                                    min={1}
+                                                    max={5}
                                                 />
                                             </div>
                                             <div>
-                                                <label>Pris pr skade:</label>
+                                                <label>Total pris af skader:</label>
                                                 <input
                                                     type='number'
                                                     name='pricePerError'
                                                     value={newDamageReport.pricePerError}
                                                     onChange={handleChange}
+                                                    min={1}
+                                                    max={10000}
                                                 />
                                             </div>
                                             <button type='submit'>Opret skaderaport</button>
