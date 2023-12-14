@@ -41,14 +41,10 @@ function AvailableCar() {
             <p>Antal udlejede biler:</p>
             <p>{rentedCars.length}</p>
             <p>ID, Bilmærke og Pris</p>
-
             {totalDetailsRentedCars.map((car) => (
               <p key={car.id}>
                 {car.id} - {car.brand} - {car.price} kr.
               </p>
-=======
-            {totalDetailsRentedCars.map(car => (
-              <p key={car.id}>{car.id} - {car.brand}</p>
             ))}
           </ul>
         </div>
