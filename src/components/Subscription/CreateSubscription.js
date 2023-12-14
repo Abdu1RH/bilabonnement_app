@@ -50,7 +50,7 @@ function CreateSubscription() {
                     <Customer
                       sendToParent={newSubscription}
                       handleChange={handleChange}
-                    /> 
+                    />
                     <form onSubmit={handleCreate}>
                       <div className="mb-3">
                         <label htmlFor="startDate" className="form-label">
@@ -89,7 +89,7 @@ function CreateSubscription() {
                           name="plannedDistanceInKilometers"
                           value={newSubscription.plannedDistanceInKilometers}
                           onChange={handleChange}
-                          min={1} 
+                          min={1}
                           max={10000000}
                         />
                       </div>
