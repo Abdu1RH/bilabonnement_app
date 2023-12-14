@@ -46,13 +46,6 @@ function Car(props) {
         <div>
           <h2>Valgt bil: {selectedCar.brand}</h2>
           <div>
-            {/* Her kan du tilføje links til at oprette, redigere eller slette biler */}
-            {/* Eksempel: */}
-            {/* <Link to={`/CreateCar/${selectedCar.id}`}> Opret en bil </Link> */}
-            {/* <Link to={`/EditCar/${selectedCar.id}`}> Rediger bil </Link> */}
-            {/* <Link to={`/DeleteCar/${selectedCar.id}`}> Slet bil </Link> */}
-            <br />
-            {/* <Link to={`/createSubscription/${selectedCar.id}`}> Opret abonnement </Link> */}
           </div>
         </div>
       )}

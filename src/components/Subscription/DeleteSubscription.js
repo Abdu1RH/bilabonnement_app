@@ -30,7 +30,6 @@ function DeleteSubscription() {
             {subscription && (
                 <div>
                     <p>ID: {subscription.id}</p>
-                    {/* Display other subscription details here */}
                     <button onClick={handleDelete}>Delete Subscription</button>
                 </div>
             )}

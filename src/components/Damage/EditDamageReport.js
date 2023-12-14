@@ -23,7 +23,7 @@ function EditDamageReport() {
     const handleUpdate = (e) => {
         e.preventDefault();
         if (selectedDamageReport) {
-            axios.put(`http://localhost:8080/api/damagereports/${selectedDamageReport.id}`, selectedDamageReport) // Tilføj backticks omkring URL'en
+            axios.put(`http://localhost:8080/api/damagereports/${selectedDamageReport.id}`, selectedDamageReport) 
                 .then(() => navigate('/createDamageReport'))
                 .catch(error => console.error('Error updating damage report:', error));
         }
@@ -51,7 +51,6 @@ function EditDamageReport() {
 
             {selectedDamageReport && (
                 <form onSubmit={handleUpdate}>
-                    {/* Display other fields for the selected damage report */}
                     <div>
                         <label>Skade:</label>
                         <input
