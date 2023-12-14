@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Bilabonnement A/S projekt
+Dette er et 3. semesters tværtfagligt projekt på uddannelsen [IT-Arkitektur](https://kea.dk/uddannelser/professionsbachelor/it-arkitektur).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| Fag der indgår i projektet:                  |
+|-----------------------------|
+| Cloud Computing             |
+| Forretningsdesign og Analytics |
+| Systemudvikling             |
+| Softwarearkitektur          |
 
-## Available Scripts
+Denne README.md fil indeholder
+- Introduktion
+- clone frontend respository
+- Mockup
+- Video
+- Medlemmer
 
-In the project directory, you can run:
+ ## <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/ff292f50-3701-4cd1-a7e2-649e322c3bdc" width="20"> Bilabonnement
+Bilabonnement A/S er en virksomhed af K.W Bruun koncernen, som importer biler. De har en hjemmeside med domænenavnet bilabonnement.dk, hvor de tilbyder abonnements- og leasingbiler.a
 
-### `npm start`
+For at til gå vores frontend appliaktion, når du cloner det, skal du: `npm install` og derefter
+`npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Så vil du komme til at køre hjemmesiden på: [http://localhost:3000](http://localhost:3000).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Applikationen er en videreudvikling af vores [mockup](https://app.uizard.io/p/91a8c48f) og [wireframe](https://app.uizard.io/p/0e81eeb2)
 
-### `npm test`
+<details><summary>
+&larr; Klik for at se video
+</summary>
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+https://github.com/Amalie956/bilabonnement_api/assets/112120321/949a724e-5845-409c-be93-24cc0c137216
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</details>
 
-### `npm run eject`
+<details>
+  <summary>&larr; Er du forretningsudvikler? Så klik her for at se dashboard!</summary>
+  <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/28273ea3-831a-400c-9e98-2377d2121bf1" alt="billede" width="700" height="500">
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Projektets rapport kan findes her [Bilabonnement Projekt](indsæt opgaven i pdf)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+    "Subscription API Endpoints:" +
+    GET /api/subscriptions: Liste af alle lejeaftaler" 
+    GET /api/subscriptions/{id}: Se en lejeaftale ud fra dens ID" 
+    POST /api/subscriptions: Lav en ny lejeaftale" 
+    PUT /api/subscriptions/{id}: Opdater en eksisterende lejeaftale" 
+    DELETE /api/subscriptions/{id}: Slet en lejeaftale";
+                               
+                
+                
+    "Damage Report API Endpoints:"
+    GET /api/damagereports: Liste af alle skaderapporter"
+    GET /api/damagereports/{id}: Se en skaderapport ud fra dens ID" 
+    POST /api/damagereports: Lav en ny skaderapport" 
+    PUT /api/damagereports/{id}: Opdater en eksisterende skaderapport" 
+    DELETE /api/damageReports/{id}: Slet en skaderapport";
+     
+    "Cars API Endpoints:"
+    GET /api/cars: Liste af alle biler"
+    GET /api/cars/{id}: Se en biler ud fra dens ID" 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   
+    "Customer Report API Endpoints:"
+    GET /api/customers: Liste af alle kunder"
+    GET /api/customers/{id}: Se en kunde ud fra ID" 
+   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+                
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 👩‍👩‍👧‍👦Contributors
+I dette team er vi fire medlemmer fra Københavns Erhvervsakademi.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hvis du vil i kontakt med andre i vores team kan du lave et mention ved at bruge `@` plus brugernavnet. Dette vil udløse en notifikation, så kan vedkommende hjælpe dig. Nedenunder kan ses vores brugernavne:
+- [Abdul](https://github.com/Abdu1RH) &rarr; `@Abdu1RH` , IT-Arkitektur studerende
+- [Amalie](https://github.com/Amalie956) &rarr; `@Amalie956`, IT-Arkitektur studerende
+- [Klara](https://github.com/Catlover2200) &rarr; `@Catlover2200`, IT-Arkitektur studerende
+- [Maheen](https://github.com/Mahe0055) &rarr; `@Mahe0055`, IT-Arkitektur studerende
