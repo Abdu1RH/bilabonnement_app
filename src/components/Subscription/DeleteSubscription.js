@@ -16,8 +16,8 @@ function DeleteSubscription() {
         });
 
     const handleDelete = () => {
-        console.log('Deleting movie with ID:', id); // Tilføj denne linje
-        axios.delete(`http://localhost:8080/api/subscriptions/{id}`)
+        console.log('Deleting subscription with ID:', id);
+        axios.delete(`http://localhost:8080/api/subscriptions/${id}`)
             .then(() => {
                 navigate('/');
             })
@@ -26,7 +26,7 @@ function DeleteSubscription() {
 
     return (
         <div>
-            <h2>Aboennementet er nu slettet</h2>
+            <h2>Delete Subscription</h2>
             {subscription && (
                 <div>
                     <p>ID: {subscription.id}</p>

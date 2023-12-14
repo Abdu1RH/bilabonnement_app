@@ -3,6 +3,8 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import AvailableCar from "./components/Subscription/AvailableCarList";
 import CreateSubscription from "./components/Subscription/CreateSubscription";
 import CreateDamageReport from "./components/Damage/CreateDamageReport";
+import EditDamageReport from "./components/Damage/EditDamageReport";
+import DeleteDamageReport from "./components/Damage/DeleteDamageReport";
 import Car from "./components/Car/Car";
 import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css"; //Bootstrap
@@ -40,6 +42,10 @@ function App() {
                 path="/createSubscription/:id"
                 element={<CreateSubscription />}
               />
+
+<Route path="/CreateDamageReport/:id" element={<CreateDamageReport />}/>
+              <Route path="/EditDamageReport/:id" element={<EditDamageReport />}/>
+              <Route path="/DeleteDamageReport/:id" element={<DeleteDamageReport />}/>
             </Routes>
           </BrowserRouter>
         </div>
