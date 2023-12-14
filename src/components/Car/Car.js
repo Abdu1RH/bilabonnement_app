@@ -27,9 +27,9 @@ function Car(props) {
     };
 
     return (
-
+ 
         <div>
-      <h3>Hvilken bil skal tilknyttes lejeaftalen?</h3>
+      <p>Hvilken bil skal tilknyttes lejeaftalen?</p>
       {/* Bootstrap Dropdown menu */}
       <select className="form-control custom-dropdown" name="carDropdown" id="carDropdown" onChange={handleSelectChange}>
         <option value="">Vælg en bil</option>

@@ -50,7 +50,7 @@ function CreateSubscription() {
                     <Customer
                       sendToParent={newSubscription}
                       handleChange={handleChange}
-                    />
+                    /> 
                     <form onSubmit={handleCreate}>
                       <div className="mb-3">
                         <label htmlFor="startDate" className="form-label">
@@ -93,21 +93,29 @@ function CreateSubscription() {
                           max={10000000}
                         />
                       </div>
-                      <button className="btn btn-primary" type="submit">
+                      <button className="createDamageReport-btn" type="submit">
                         Opret abonnementsaftale
                       </button>
                     </form>
                   </div>
                 </div>
-
-                <Link to={`/EditSubscription/${newSubscription.id}`}>
+                <div>
+                <button className="editDamageReport-btn">
+                <Link className="linkColor"  to={`/EditSubscription/${newSubscription.id}`}>
                   {" "}
                   Updaterer abonnementet{" "}
                 </Link>
-                <Link to={`/DeleteSubscription/${newSubscription.id}`}>
+                </button>
+                </div>
+
+                <div>
+                <button className="deleteDamageReport-btn">
+                <Link className="linkColor"  to={`/DeleteSubscription/${newSubscription.id}`}>
                   {" "}
                   Slet abonnement{" "}
                 </Link>
+                </button>
+                </div>
               </div>
             </div>
           </div>
