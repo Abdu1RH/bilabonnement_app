@@ -99,7 +99,6 @@ h1 {
   display: flex;
 }
 
-
 /* Container for .car-container */
 .container-gray {
   background-color: rgb(231, 229, 229);
@@ -289,7 +288,6 @@ h1 {
 
 .subscription-container h1 {
   font-size: 24px; /* Juster størrelsen efter dit behov */
-  
 }
 
 /* Tekst størrelse for 'abonnementer' i Skade og udbedring */
@@ -354,10 +352,20 @@ h1 {
 }
 
 .linkColor {
-color:#fff;
+  color: #fff;
 }
 
 .alignText {
   text-align: left;
   width: 150px;
+}
+
+.update-sub-btn {
+  background-color: rgb(224, 203, 42);
+  color: #fff;
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  border-color: rgb(224, 203, 42);
+  margin-top: 20px;
 }
