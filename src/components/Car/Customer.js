@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import EditCar from './EditCar';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 

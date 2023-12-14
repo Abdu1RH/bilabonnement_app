@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Subscription from "../Subscription/Subscription";
-import EditDamageReport from "./EditDamageReport";
-import DeleteDamageReport from "./DeleteDamageReport";
 
 function CreateDamageReport() {
     const navigate = useNavigate();

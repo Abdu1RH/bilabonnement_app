@@ -1,9 +1,0 @@
-.car-list {
-    list-style-type: none; /* Fjerner punkterne fra listen */
-    padding: 0; /* Fjerner standard indrykning på listen */
-  }
-  
-  .car-list li {
-    margin-bottom: 5px; /* Tilføjer en lille afstand mellem bilmodellerne */
-  }
-  
