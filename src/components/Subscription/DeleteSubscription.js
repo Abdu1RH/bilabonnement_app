@@ -26,11 +26,11 @@ function DeleteSubscription() {
 
     return (
         <div>
-            <h2>Delete Subscription</h2>
+            <h2>Slet lejeaftale</h2>
             {subscription && (
                 <div>
                     <p>ID: {subscription.id}</p>
-                    <button onClick={handleDelete}>Delete Subscription</button>
+                    <button onClick={handleDelete}>Slet lejeaftale</button>
                 </div>
             )}
         </div>

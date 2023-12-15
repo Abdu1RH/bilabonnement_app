@@ -60,7 +60,7 @@ function DeleteDamageReport() {
             {selectedDamageReport && (
                 <div>
                     <p>Valgte skaderapport : {selectedDamageReport.error} - {selectedDamageReport.errorType} - {selectedDamageReport.subscription?.car?.brand}</p>
-                    <p>Skaderrapporten vil permanent blive slettet, ønsker du at fortsætte?</p>
+                    <p>Skaderapporten vil permanent blive slettet, ønsker du at fortsætte?</p>
                     <button onClick={() => handleDelete(selectedDamageReport.id)}>Ja, Slet</button>
                     <button onClick={handleCancel}>Nej, Annuller</button>
                 </div>
