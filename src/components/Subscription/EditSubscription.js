@@ -39,7 +39,7 @@ function EditSubscription() {
   return (
     <div className="container">
       <div className="inner-container">
-        <h2>Opdatere abonnement</h2>
+        <h2>Opdatere lejeaftale</h2>
       </div>
       <div className="row">
         <div className="col-md-6">
@@ -105,7 +105,7 @@ function EditSubscription() {
                       </div>
 
                       <button className="update-sub-btn" type="submit">
-                        Opdater abonnement
+                        Opdater lejeaftale
                       </button>
                     </form>
                   </div>

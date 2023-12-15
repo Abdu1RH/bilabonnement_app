@@ -8,7 +8,7 @@ function CreateDamageReport() {
     const [newDamageReport, setNewDamageReport] = useState({
         error: "",
         errorType: "",
-        numberOfErrors: 0,
+        numbersOfErrors: 0,
         pricePerError: 0.0,
     });
 
@@ -32,6 +32,8 @@ const handleCreate = (e) => {
         <div className="container-gray">
             <div className="inner-container">
                 <h1>Skade og udbedring</h1>
+                <p>Her kan du adminstrere skaderapporter</p>
+                <p>Obs du skal opdater antal skader efter du har oprettet en skaderapport</p>
             </div>
             <Subscription sendToParent={newDamageReport} handleChange={handleChange} />
             <div className="outer-container">
@@ -82,7 +84,7 @@ const handleCreate = (e) => {
                                                     onChange={handleChange}
                                                 /> 
                                             </div>
-                                            <button className="createDamageReport-btn" type='submit'>Opret skaderaport</button>
+                                            <button className="createDamageReport-btn" type='submit'>Opret skaderapport</button>
                                         </form>
                                     </div>
                                 </div>

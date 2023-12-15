@@ -32,13 +32,13 @@ function Subscription(props) {
 
   return (
     <div>
-      <h1 className="subscription-title">Abonnementer</h1>
+      <h1 className="subscription-title">Lejeaftaler</h1>
       <select
         name="subscriptionDropdown"
         id="subscriptionDropdown"
         onChange={handleSelectChange}
       >
-        <option value="">Vælg abonnement</option>
+        <option value="">Vælg lejeaftale</option>
         {subscriptions.length > 0 &&
           subscriptions.map((subscription) => (
             <option key={subscription.id} value={subscription.id}>

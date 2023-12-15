@@ -42,7 +42,7 @@ function CreateSubscription() {
               <div className="row">
                 <div className="col-md-6">
                   <div className="subscription-container">
-                    <h1>Abonnement information</h1>
+                    <h1>Lejeaftale information</h1>
                     <Car
                       sendToParent={newSubscription}
                       handleChange={handleChange}
@@ -94,7 +94,7 @@ function CreateSubscription() {
                         />
                       </div>
                       <button className="createDamageReport-btn" type="submit">
-                        Opret abonnementsaftale
+                        Opret lejeaftale
                       </button>
                     </form>
                   </div>
